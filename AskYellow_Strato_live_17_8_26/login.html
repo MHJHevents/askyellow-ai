@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AskYellow – Inloggen</title>
+
+    <style>
+        body {
+            font-family: Poppins, sans-serif;
+            background: #020309;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .box {
+            background: #111;
+            padding: 25px;
+            border-radius: 14px;
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(255,215,0,0.25);
+        }
+
+        /* INPUTS */
+        input {
+            width: 100%;
+            height: 46px;
+            line-height: 46px;
+            padding: 0 16px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #444;
+            background: #222;
+            color: white;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        /* BUTTON */
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #FFD700;
+            color: #111;
+            border: none;
+            border-radius: 8px;
+            font-weight: 800;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        /* PASSWORD + OOGJE */
+        .password-wrap {
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+            .password-wrap input {
+                padding-right: 44px;
+            }
+
+        .toggle-password {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            line-height: 1;
+            cursor: pointer;
+            user-select: none;
+            opacity: 0.6;
+            transition: opacity 0.15s ease;
+        }
+
+        .toggle-password:hover {
+            opacity: 1;
+        }
+        .btn-secondary {
+            background: transparent;
+            color: #FFD700;
+            border: 2px solid #FFD700;
+            margin-top: 12px;
+        }
+
+            .btn-secondary:hover {
+                background: #FFD700;
+                color: #111;
+            }
+
+
+
+    </style>
+</head>
+<body>
+
+    <h2>Inloggen</h2>
+
+    <div class="box">
+        <form id="loginForm" autocomplete="on">
+            <input id="email"
+                   type="email"
+                   placeholder="Email"
+                   required />
+
+            <div class="password-wrap">
+                <input id="password" type="password" placeholder="Wachtwoord" required />
+                <span class="toggle-password" data-target="password">👁️</span>
+            </div>
+
+            <p class="forgot-wrap">
+                <a href="/reset.html">Wachtwoord vergeten?</a>
+            </p>
+
+            <button type="submit">Inloggen</button>
+
+            <!-- 👇 NIEUW: gastknop -->
+            <button type="button" id="btn-guest" class="btn-secondary">
+                👤 Gast chat
+            </button>
+        </form>
+
+
+        <p style="margin-top:10px;">
+            Nog geen account?
+            <a href="/register.html">Account aanmaken</a>
+        </p>
+    </div>
+
+
+
+    <script src="/js/login2.js" defer></script>
+
+</body>
+</html>
+

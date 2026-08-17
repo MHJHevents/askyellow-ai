@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  
+  <!-- META & SEO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AskYellow – Your World, Your Answers</title>
+  <meta name="description" content="AskYellow is jouw plek voor slimme producten, eerlijke prijzen en betrouwbare antwoorden. Ontdek onze webshop en antwoordmachine.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.askyellow.eu/">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AskYellow",
+    "url": "https://www.askyellow.eu",
+    "logo": "https://www.askyellow.nl/logo.png",
+    "sameAs": [
+      "https://shop.askyellow.nl",
+      "https://www.instagram.com/askyellow",
+      "https://www.facebook.com/askyellow"
+    ]
+  }
+
+  </script>
+
+  <!-- SESSION-ID VOOR LOKAAL GEBRUIK -->
+  <script>
+  if (!localStorage.getItem("yellowSession")) {
+    localStorage.setItem(
+      "yellowSession",
+      "sess-" + Date.now() + "-" + Math.random().toString(36).slice(2)
+    );
+  }
+  const YELLOW_SESSION = localStorage.getItem("yellowSession");
+  </script>
+
+  <!-- STYLES -->
+  <style>
+    :root{
+      --bg: #020309;
+      --text: #f9f9f9;
+      --muted: #b3b3b3;
+      --card: #050509;
+      --border: #FFD700;
+      --accent: #FFD700;
+      --shadow: rgba(0,0,0,0.85);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg: #020309;
+        --text: #f9f9f9;
+        --muted: #b3b3b3;
+        --card: #050509;
+        --border: #FFD700;
+        --accent: #FFD700;
+        --shadow: rgba(0,0,0,0.85);
+      }
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body {
+      background:
+        radial-gradient(circle at top, #202040 0, #020309 45%, #000 100%);
+      color: var(--text);
+      font-family: "Poppins", Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 18px 10px 80px;
+      text-align: center;
+    }
+
+    /* TOPBAR */
+    .topbar{
+      width: 100%;
+      max-width: 980px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+      margin: 4px auto 8px;
+    }
+    .lang-switch{ display:flex; gap:6px; }
+    .lang-btn{
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 12px;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+      font-weight: 600;
+      font-size: .80rem;
+      line-height:1;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .lang-btn:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 0 16px rgba(255,210,0,0.6);
+      border-color: var(--border);
+      background: rgba(8,8,16,0.9);
+    }
+    .lang-btn.active{
+      background: linear-gradient(135deg,#FFD700,#FFB700);
+      color:#000;
+      border-color: transparent;
+      box-shadow: 0 0 18px rgba(255,210,0,0.8);
+    }
+
+    /* HEADER */
+    .logo{
+      width: 150px;
+      height:auto;
+      margin: 8px 0 12px;
+    }
+    .subtitle{
+      font-size: 1.35rem;
+      font-weight: 900;
+      margin: 0 0 1.5em;
+      background: linear-gradient(90deg,#777 0%,#fff8c6 25%,#FFD700 50%,#fff8c6 75%,#FFD700 100%);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+      background-size: 300% 100%;
+      animation: subtitleGlow 7s linear infinite;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      text-shadow: 0 0 6px rgba(255,220,0,0.4),0 0 16px rgba(0,0,0,0.65);
+    }
+    @keyframes subtitleGlow{
+      0%{ background-position:0 0 }
+      100%{ background-position:300% 0 }
+    }
+
+    /* SEARCH */
+    .search-container{
+      width: min(90%, 520px);
+      margin: 0 auto 22px;
+      display: flex; gap: 10px;
+      border: 2px solid var(--border);
+      border-radius: 50px;
+      background: rgba(6,6,14,0.98);
+      padding: 6px 6px 12px 6px;
+      position: relative;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.04),
+        0 18px 36px rgba(0,0,0,0.9),
+        0 0 20px rgba(255,210,0,0.35);
+    }
+    @media (prefers-color-scheme: dark){
+      .search-container{ background: rgba(6,6,14,0.98); }
+    }
+
+    .search-input{
+      flex: 1;
+      border: none; outline: none;
+      background: transparent;
+      color: var(--text);
+      font-size: 1rem;
+      padding: 12px 16px;
+      border-radius: 30px;
+    }
+
+    .search-input::placeholder{
+      color: var(--muted);
+    }
+
+    .search-btn{
+      border: none; cursor: pointer;
+      background: var(--accent); color: #111;
+      font-weight: 800; font-size: 1rem;
+      padding: 12px 24px; border-radius: 30px;
+      position: relative;
+      transition: transform .2s ease, box-shadow .2s ease;
+      box-shadow:
+        0 0 0 1px rgba(0,0,0,0.85),
+        0 8px 20px rgba(255,210,0,0.7);
+      white-space: nowrap;
+    }
+    .search-btn:hover{
+      transform: scale(1.04);
+      box-shadow:
+        0 0 0 1px rgba(0,0,0,0.9),
+        0 12px 26px rgba(255,210,0,0.9);
+    }
+
+    .beta-badge{
+      position: absolute;
+      top: -8px; right: -10px;
+      background: linear-gradient(45deg,#FF4C4C,#FF9900);
+      color:#fff;
+      font-size:.6rem; font-weight:800;
+      padding: 2px 6px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255,200,0,.7);
+      animation: betaGlow 2s ease-in-out infinite;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+    @keyframes betaGlow{
+      0%,100%{ box-shadow:0 0 6px rgba(255,200,0,.6) }
+      50%{ box-shadow:0 0 12px rgba(255,150,0,.9) }
+    }
+
+    .launch-badge{
+      position: absolute;
+      right: 18px;
+      bottom: -22px;
+      font-size: 0.80rem;
+      color: var(--muted);
+    }
+
+    /* INFO CARD ONDER ZOEK */
+    .info-card{
+      width: min(90%, 720px);
+      margin: 26px auto 0;
+      padding: 16px 20px;
+      border-radius: 18px;
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid rgba(255,215,0,0.6);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.03),
+        0 18px 38px rgba(0,0,0,0.9);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* SHOP + CHAT BUTTONS */
+    .button-row {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 28px;
+    }
+
+    .shop-button {
+      margin-top: 0px !important;
+      padding: 13px 34px !important;
+      border-radius: 30px !important;
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      height: 60px;
+      font-size: 0.90rem !important;
+      font-weight: 800 !important;
+      background: linear-gradient(180deg, #FFD700 0%, #FFC300 100%);
+      color:#111; text-decoration:none;
+      box-shadow: 0 4px 10px var(--shadow);
+      border: none;
+      cursor: pointer;
+      max-width: fit-content;
+    }
+    .shop-button:hover{
+      transform: translateY(-1px) scale(1.02);
+    }
+
+    .yello-chat-wrapper{
+      position:relative;
+      display:inline-flex;
+      align-items:center;
+      gap:0;
+    }
+    .yello-figure{
+      height: 85px;
+      width:auto;
+      margin-right:-40px;
+      margin-bottom:-10px;
+      z-index:5;
+      pointer-events:none;
+      filter: drop-shadow(0 0 14px rgba(255,210,0,0.8));
+      transform-origin: 50% 80%;
+      display:inline-block;
+      animation: yello-breathe 1.8s ease-in-out infinite;
+    }
+    @keyframes yello-breathe{
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.15); }
+    }
+    .yello-chat-wrapper .shop-button{
+      padding-left: 52px;
+      position:relative;
+      z-index:4;
+    }
+    @media (max-width: 768px){
+      .button-row{ gap:14px; margin-top:22px; }
+      .yello-figure{ height:78px; margin-right:-34px; }
+      .yello-chat-wrapper .shop-button{ padding-left: 48px; }
+    }
+
+    /* RESULT */
+    #results{ width:min(90%, 620px); margin: 10px auto 0; }
+    #results .card{
+      text-align: left;
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px 20px;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.05),
+        0 20px 40px rgba(0,0,0,0.9);
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+    footer{
+      margin-top: 32px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    footer a{
+      color: var(--accent);
+    }
+
+    /* COOKIEBANNER */
+    .cookie-banner{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--card);
+      color: var(--text);
+      border-top: 1px solid var(--border);
+      padding: 10px 16px;
+      font-size: 0.85rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 -10px 30px rgba(0,0,0,0.9);
+      z-index: 9999;
+    }
+    .cookie-banner button{
+      background: var(--accent);
+      color:#111;
+      border-radius: 999px;
+      border: none;
+      padding: 6px 14px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+    }
+
+    /* MOBIEL TUNING */
+    @media (max-width: 480px) {
+      body {
+        padding: 16px 10px 80px;
+      }
+
+      .logo {
+        width: 150px;
+        margin-bottom: 6px;
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.1em;
+      }
+
+      .search-container {
+        width: 100%;
+        border-radius: 40px;
+        padding: 4px 4px 10px;
+      }
+
+      .info-card {
+        margin-top: 18px;
+        padding: 14px 14px;
+        font-size: 0.9rem;
+      }
+
+      .button-row {
+        margin-top: 22px;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .shop-button {
+        width: 260px;
+        max-width: 260px;
+        margin: 0 auto;
+      }
+
+      .yello-chat-wrapper {
+        width: 260px;
+        max-width: 260px;
+        margin: 0 auto;
+        justify-content: center;
+      }
+
+      .yello-chat-wrapper .shop-button {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+      .login-overlay {
+          position: fixed;
+          inset: 0;
+          background: rgba(0,0,0,0.85);
+          backdrop-filter: blur(6px);
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.25s ease;
+          z-index: 21000; /* hoger dan chat */
+      }
+
+          .login-overlay.open {
+              visibility: visible;
+              opacity: 1;
+          }
+
+      .login-container {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: #050509;
+          border: 1px solid #FFD700;
+          border-radius: 16px;
+          padding: 24px;
+          width: min(90%, 420px);
+          box-shadow: 0 20px 50px rgba(0,0,0,0.9);
+      }
+
+      .login-close {
+          position: absolute;
+          top: 10px;
+          right: 14px;
+          background: none;
+          border: none;
+          font-size: 28px;
+          color: #FFD700;
+          cursor: pointer;
+      }
+      .login-container {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: transparent;
+          width: min(92%, 420px);
+          height: 420px;
+      }
+      /* ===== OVERLAY BASE ===== */
+      .chat-overlay,
+      .login-overlay {
+          position: fixed;
+          inset: 0;
+          display: none;
+          align-items: center;
+          justify-content: center;
+      }
+
+          .chat-overlay.open,
+          .login-overlay.open {
+              display: flex;
+          }
+
+      /* ===== Z-INDEX ===== */
+      #searchOverlay {
+          z-index: 10001;
+      }
+
+      .chat-overlay {
+          z-index: 20000;
+      }
+
+      .login-overlay {
+          z-index: 21000;
+      }
+
+      /* ===== BACKDROPS ===== */
+      .chat-backdrop,
+      .login-backdrop {
+          position: absolute;
+          inset: 0;
+          background: rgba(0,0,0,0.6);
+          pointer-events: none; /* 🔑 voorkomt klik-blokkade */
+      }
+
+      /* ===== CONTAINERS ===== */
+      .chat-container,
+      .login-container {
+          position: relative;
+          width: 92vw;
+          height: 92vh;
+          max-width: 900px;
+          max-height: 900px;
+          background: #000;
+          border-radius: 18px;
+          box-shadow: 0 0 60px rgba(255,215,0,0.35);
+          overflow: hidden;
+      }
+
+      /* ===== IFRAMES ===== */
+      .chat-iframe,
+      .login-iframe {
+          width: 100%;
+          height: 100%;
+          border: none;
+          background: transparent;
+          pointer-events: auto; /* 🔑 hier gebeurt het typen */
+      }
+      .chat-avatar-wrapper {
+          position: static; /* of: GEWOON WEG LATEN */
+          display: flex;
+          align-items: center;
+      }
+
+      .inline-avatar {
+          display: flex;
+          align-items: center;
+      }
+
+      .chat-avatar {
+          width: 64px; /* sweet spot */
+          height: auto;
+          pointer-events: none;
+      }
+
+      @media (max-width: 480px) {
+          .chat-avatar {
+              display: none;
+          }
+
+  </style>
+
+</head>
+
+<body>
+
+    <!-- LANGUAGE SWITCH -->
+    <div class="topbar">
+        <div class="lang-switch">
+            <button class="lang-btn" data-lang="nl" id="btn-nl">🇳🇱 NL</button>
+            <button class="lang-btn" data-lang="en" id="btn-en">🇬🇧 EN</button>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <img src="logo.png" alt="AskYellow" class="logo" />
+    <p id="subtitle" class="subtitle" data-i18n="subtitle">Your world, your answers.</p>
+
+    <!-- SEARCH MODE WRAPPER -->
+    <div id="search-mode">
+
+        <!-- SEARCH BAR -->
+        <form id="askyellow-form" class="search-container" autocomplete="off">
+            <input type="text"
+                   id="askyellow-input"
+                   class="search-input"
+                   placeholder="🎉 AskYellow AI Beta V2.0 is live – typ je vraag..."
+                   data-i18n-placeholder="placeholder_beta"
+                   required />
+            <button id="askyellow-btn" type="submit" class="search-btn" data-i18n="search">
+                Zoek
+                <span class="beta-badge">BETA V1.0</span>
+            </button>
+        </form>
+
+        <!-- RESULTS -->
+        <div id="results">
+            <div class="card" id="default-result" data-i18n="default_result">
+                AskYellow is een digitale zoekmachine en AI-platform. Stel je vraag en ontvang direct een actueel antwoord.
+            </div>
+        </div>
+        <!-- SHOP + CHAT BUTTONS -->
+        <div class="button-row">
+
+            <a href="https://shop.askyellow.nl" class="shop-button">
+                🛒 AskYellow shop
+            </a>
+
+            <div class="chat-avatar-wrapper">
+                <video class="chat-avatar" autoplay muted loop playsinline preload="metadata">
+                    <source src="img/yello_toetsenbord_trans.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <button id="chat-btn" class="shop-button">
+                YellowMind chat
+            </button>
+
+        </div>
+
+    </div><!-- /search-mode -->
+    <!-- SEARCH OVERLAY (fullscreen search) -->
+    <div id="searchOverlay">
+        <div id="closeSearch">×</div>
+        <iframe id="searchFrame" src=""></iframe>
+    </div>
+
+    <!-- LOGIN OVERLAY -->
+    <div id="login-overlay" class="login-overlay">
+        <div class="login-backdrop" onclick="closeLoginOverlay()"></div>
+        <div class="login-container">
+            <iframe id="loginFrame"
+                    class="login-iframe"
+                    title="AskYellow Login"></iframe>
+        </div>
+    </div>
+
+
+
+    <script>
+        const BASE_PATH = "";
+
+        const I18N = {
+            nl: {
+                subtitle: "Jouw wereld, jouw antwoorden.",
+                placeholder: "Typ je vraag...",
+                placeholder_beta: "🎉 AskYellow AI Beta V2.0 is live – typ je vraag...",
+                search: "Zoek",
+                default_result:
+                    "AskYellow is een digitale zoekmachine gebaseerd op AI!.",
+                shop_button: "🛒 AskYellow shop",
+                launch_badge: "🎉 BETA V1.0!",
+                footer_allrights: "© 2025 AskYellow. Alle rechten voorbehouden.",
+                footer_about: "Over",
+                footer_contact: "Contact",
+                footer_shop: "Shop"
+            },
+            en: {
+                subtitle: "Your world, your answers.",
+                placeholder: "Type your question...",
+                placeholder_beta: "🎉 AskYellow AI Beta V2.0 is live – type your question...",
+                search: "Search",
+                default_result:
+                    "AskYellow is your place for smart products, fair prices and reliable answers. Ask your question and get a live answer.",
+                shop_button: "🛒 AskYellow shop",
+                launch_badge: "🎉 BETA V1.0!",
+                footer_allrights: "© 2025 AskYellow. All rights reserved.",
+                footer_about: "Over",
+                footer_contact: "Contact",
+                footer_shop: "Shop"
+            }
+        };
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const subtitleEl = document.getElementById("subtitle");
+            const inputEl = document.getElementById("askyellow-input");
+            const buttonEl = document.getElementById("askyellow-btn");
+            const defaultResultEl = document.getElementById("default-result");
+            const shopBtnEl = document.querySelector(".shop-button");
+            const footerRightsEl = document.getElementById("footer-rights");
+            const linkAbout = document.getElementById("link-about");
+            const linkContact = document.getElementById("link-contact");
+            const betaBadgeEl = document.querySelector(".beta-badge");
+            const btnNL = document.getElementById("btn-nl");
+            const btnEN = document.getElementById("btn-en");
+            const form = document.querySelector("#askyellow-form");
+            const searchOverlay = document.getElementById("searchOverlay");
+            const searchFrame = document.getElementById("searchFrame");
+            const closeSearch = document.getElementById("closeSearch");
+            const SEARCH_FILE = `${BASE_PATH}/search.html`;
+
+            function applyI18N(lang) {
+                const dict = I18N[lang] || I18N["nl"];
+
+                if (subtitleEl) subtitleEl.textContent = dict.subtitle;
+                if (inputEl) inputEl.placeholder = dict.placeholder_beta || dict.placeholder;
+                if (buttonEl) buttonEl.textContent = dict.search;
+                if (defaultResultEl) defaultResultEl.textContent = dict.default_result;
+                if (shopBtnEl) shopBtnEl.textContent = dict.shop_button;
+                if (footerRightsEl) footerRightsEl.textContent = dict.footer_allrights;
+                if (betaBadgeEl) betaBadgeEl.textContent = dict.launch_badge;
+                if (linkAbout) linkAbout.textContent = dict.footer_about;
+                if (linkContact) linkContact.textContent = dict.footer_contact;
+
+                localStorage.setItem("askyellow_lang", lang);
+            }
+
+            function detectLang() {
+                const saved = localStorage.getItem("askyellow_lang");
+                if (saved) return saved;
+
+                const nav = (navigator.language || "en").toLowerCase();
+                return nav.startsWith("nl") ? "nl" : "en";
+            }
+
+            const initialLang = detectLang();
+            applyI18N(initialLang);
+
+            if (btnNL && btnEN) {
+                btnNL.addEventListener("click", () => applyI18N("nl"));
+                btnEN.addEventListener("click", () => applyI18N("en"));
+            }
+
+            function isSpam(text) {
+                const t = text.toLowerCase().trim();
+                if (t.length < 2) return true;
+                if (/^(.)\1{5,}$/.test(t)) return true;
+                if (/[^a-z0-9\s.,!?€@()\-\€]/i.test(t)) return true;
+                if (t.includes("<script") || t.includes("</script")) return true;
+                if (t.includes("onerror=") || t.includes("onload=")) return true;
+                if (t.includes("drop table") || t.includes("delete from")) return true;
+                if (t.includes("select * from")) return true;
+                if (t.includes("free money") && t.includes("profit")) return true;
+                return false;
+            }
+
+            function openSearchOverlay(query) {
+                if (!searchOverlay || !searchFrame) return;
+                const q = encodeURIComponent(query);
+                searchFrame.src = `${SEARCH_FILE}?q=${q}`;
+                searchOverlay.classList.add("open");
+            }
+            window.openSearchOverlay = openSearchOverlay;
+
+            if (closeSearch && searchOverlay && searchFrame) {
+                closeSearch.addEventListener("click", () => {
+                    searchOverlay.classList.remove("open");
+                    searchFrame.src = "";
+                });
+            }
+
+            if (form && inputEl) {
+                form.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    const vraag = inputEl.value.trim();
+                    if (!vraag || isSpam(vraag)) return;
+                    openSearchOverlay(vraag);
+                });
+
+                inputEl.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter") {
+                        e.preventDefault();
+                        const vraag = inputEl.value.trim();
+                        if (!vraag || isSpam(vraag)) return;
+                        openSearchOverlay(vraag);
+                    }
+                });
+            }
+        });
+    </script>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            <a id="link-about" href="about.html">About</a> |
+            <a id="link-contact" href="contact.html">Contact</a> |
+            <a id="link-privacy" href="privacy.html">Privacy</a> |
+        </p>
+        <p id="footer-rights">© 2025 AskYellow. All rights reserved.</p>
+    </footer>
+
+    <!-- COOKIE BANNER -->
+    <div id="cookie-banner" style="
+    position: fixed; bottom: 0; left: 0; width: 100%;
+    background-color: var(--card);
+    border-top: 1px solid var(--border);
+    display: flex; flex-wrap: wrap; gap: 10px;
+    justify-content: center; align-items: center;
+    padding: 10px 14px;
+    font-size: .9rem; z-index: 9999;">
+        <span id="cookie-text" style="flex:1; min-width: 220px; text-align: left;">
+            🍪 AskYellow gebruikt functionele cookies voor sessiebeveiliging en betere werking.
+        </span>
+        <a id="cookie-more" href="privacy.html" style="color: var(--text); text-decoration: underline;">Lees meer</a>
+        <button id="cookie-accept" style="
+      margin-left: 6px; background: var(--accent); color:#111;
+      border:none; border-radius: 20px; padding: 8px 16px; font-weight: 800; cursor: pointer;">
+            Akkoord
+        </button>
+    </div>
+
+    <script>
+        const banner = document.getElementById("cookie-banner");
+        const btn = document.getElementById("cookie-accept");
+
+        if (localStorage.getItem("askyellow_cookie_ok") === "true") {
+            banner.style.display = "none";
+        }
+
+        btn.addEventListener("click", () => {
+            localStorage.setItem("askyellow_cookie_ok", "true");
+            banner.style.opacity = "0";
+            setTimeout(() => { banner.style.display = "none"; }, 350);
+        });
+    </script>
+
+    <script>
+        document.getElementById("chat-btn").onclick = () => {
+            window.location.href = "login.html";
+        };
+
+    </script>
+
+
+
+    <!-- SEARCH OVERLAY CSS -->
+    <style>
+        #searchOverlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.9);
+            display: none;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 40px;
+            z-index: 10001;
+        }
+
+            #searchOverlay.open {
+                display: flex;
+            }
+
+        #searchFrame {
+            width: 90%;
+            height: 85vh;
+            border: none;
+            border-radius: 14px;
+            box-shadow: 0 0 25px rgba(255, 200, 0, 0.4);
+            overflow: hidden;
+            background: #000;
+        }
+
+        #closeSearch {
+            position: absolute;
+            right: 30px;
+            top: 25px;
+            font-size: 38px;
+            color: #fff;
+            cursor: pointer;
+            z-index: 20000;
+            font-weight: bold;
+        }
+    </style>
+
+</body>
+</html>

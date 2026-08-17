@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AskYellow – Email bevestigen</title>
+    <style>
+        body {
+            font-family: Poppins, sans-serif;
+            background: #020309;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .box {
+            background: #111;
+            padding: 25px;
+            border-radius: 14px;
+            max-width: 460px;
+            margin: 0 auto;
+            box-shadow: 0 0 30px rgba(255,215,0,0.25);
+        }
+
+        .status {
+            margin-top: 14px;
+            line-height: 1.5;
+        }
+
+        .success {
+            color: #7CFF7C;
+        }
+
+        .error {
+            color: #ff6666;
+        }
+
+        a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #FFD700;
+            color: #111;
+            border: none;
+            border-radius: 8px;
+            font-weight: 800;
+            cursor: pointer;
+            margin-top: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Email bevestigen</h2>
+
+    <div class="box">
+        <p id="message" class="status">Bezig met verifiëren...</p>
+        <a id="loginLink" href="/login.html" style="display:none;">← Naar inloggen</a>
+    </div>
+
+    <script>
+        const API_BASE =
+            location.hostname === "askyellow.nl" || location.hostname === "www.askyellow.nl"
+                ? "https://askyellow-ai.onrender.com"
+                : "https://askyellow-staging.onrender.com";
+
+        const params = new URLSearchParams(window.location.search);
+        const token = params.get("token");
+        const msg = document.getElementById("message");
+        const loginLink = document.getElementById("loginLink");
+
+        async function run() {
+            if (!token) {
+                msg.textContent = "Geen verificatietoken gevonden.";
+                msg.className = "status error";
+                loginLink.style.display = "inline-block";
+                return;
+            }
+
+            try {
+                const res = await fetch(`${API_BASE}/auth/verify-email?token=${encodeURIComponent(token)}`);
+                const data = await res.json();
+
+                if (!res.ok) {
+                    msg.textContent = data.message || "Verificatie mislukt.";
+                    msg.className = "status error";
+                    loginLink.style.display = "inline-block";
+                    return;
+                }
+
+                msg.textContent = "Je e-mailadres is bevestigd. Je kunt nu inloggen.";
+                msg.className = "status success";
+                loginLink.href = "/login.html?verified=1";
+                loginLink.style.display = "inline-block";
+            } catch (err) {
+                console.error(err);
+                msg.textContent = "Er ging iets mis tijdens het verifiëren.";
+                msg.className = "status error";
+                loginLink.style.display = "inline-block";
+            }
+        }
+
+        run();
+    </script>
+</body>
+</html>

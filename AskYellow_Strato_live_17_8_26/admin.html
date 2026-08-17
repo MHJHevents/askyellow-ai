@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YellowMind Admin (DEV / Staging)</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #050509;
+      color: #f8f8f8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 16px 24px;
+      background: linear-gradient(135deg, #ffd700, #ff9f1c);
+      color: #111;
+      font-weight: 800;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header span.env {
+      background: #111;
+      color: #ffd700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+    main {
+      padding: 16px 24px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 16px;
+      flex: 1;
+      box-sizing: border-box;
+    }
+    .panel {
+      background: #101018;
+      border-radius: 12px;
+      padding: 12px 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+      border: 1px solid #222233;
+    }
+    .panel h2 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #ffd700;
+    }
+    label {
+      font-size: 0.85rem;
+      display: block;
+      margin-bottom: 4px;
+      color: #ccccdd;
+    }
+    input[type="password"],
+    input[type="text"] {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid #33334a;
+      background: #050509;
+      color: #f8f8f8;
+      box-sizing: border-box;
+      margin-bottom: 8px;
+    }
+    button {
+      border: none;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: #ffd700;
+      color: #111;
+      margin-right: 6px;
+      margin-top: 4px;
+    }
+    button.secondary {
+      background: #222233;
+      color: #f8f8f8;
+    }
+    small {
+      font-size: 0.75rem;
+      color: #8888aa;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .summary-item {
+      background: #151522;
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 0.85rem;
+      border: 1px solid #24243a;
+    }
+    .summary-item span.value {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ffd700;
+      display: block;
+    }
+    .list {
+      max-height: 45vh;
+      overflow-y: auto;
+      margin-top: 6px;
+      border-top: 1px solid #24243a;
+    }
+    .list-item {
+      padding: 8px 0;
+      border-bottom: 1px solid #24243a;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+    .list-item:hover {
+      background: #1b1b2b;
+    }
+    .list-item span.conv-id {
+      font-weight: 700;
+      color: #ffd700;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 6px;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      background: #222233;
+      color: #ccccff;
+      margin-left: 4px;
+    }
+    .messages {
+      max-height: 55vh;
+      overflow-y: auto;
+      margin-top: 8px;
+      border-top: 1px solid #24243a;
+      padding-top: 6px;
+      font-size: 0.9rem;
+    }
+    .msg {
+      margin-bottom: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      background: #151522;
+    }
+    .msg.user {
+      border-left: 3px solid #ffd700;
+    }
+    .msg.assistant {
+      border-left: 3px solid #3ddc84;
+    }
+    .msg-role {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #9999cc;
+      margin-bottom: 4px;
+    }
+    .msg-meta {
+      font-size: 0.7rem;
+      color: #777799;
+      margin-top: 4px;
+    }
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      margin: 0;
+    }
+    footer {
+      padding: 8px 16px;
+      font-size: 0.75rem;
+      color: #777799;
+      text-align: right;
+      border-top: 1px solid #151522;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <strong>YellowMind Admin</strong>
+    <span style="margin-left:8px;font-size:0.85rem;">DEV dashboard</span>
+  </div>
+  <span class="env">STAGING BACKEND</span>
+</header>
+
+<main>
+  <!-- LINKERKANT: instellingen + overzicht + convo-lijst -->
+  <section class="panel">
+    <h2>Toegang & overzicht</h2>
+    <label for="adminKey">Admin key (wordt niet opgeslagen)</label>
+    <input type="password" id="adminKey" placeholder="Voer je ADMIN_KEY in" autocomplete="off" />
+
+    <button id="btnLoadSummary">Laad overzicht</button>
+    <button id="btnLoadConversations" class="secondary">Laad conversaties</button>
+    <small id="statusText"></small>
+
+    <div id="summary" class="summary-grid"></div>
+
+    <div class="list" id="convList"></div>
+  </section>
+
+  <!-- RECHTERKANT: berichten van één conversatie -->
+  <section class="panel">
+    <h2>Berichten in gesprek</h2>
+    <small id="convMeta"></small>
+    <div class="messages" id="messages"></div>
+  </section>
+</main>
+
+<footer>
+  DEV / Staging admin – praat met https://askyellow-ai.onrender.com
+</footer>
+
+<script>
+  // Datum netjes naar NL-formaat
+  function formatDate(iso) {
+    if (!iso) return "";
+    const d = new Date(iso);
+    if (isNaN(d)) return iso; // fallback als het geen geldige datum is
+    return d.toLocaleString("nl-NL", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit"
+    });
+  }
+
+  const BASE_URL = "https://askyellow-ai.onrender.com";
+
+  const keyInput    = document.getElementById("adminKey");
+  const statusText  = document.getElementById("statusText");
+  const summaryDiv  = document.getElementById("summary");
+  const convList    = document.getElementById("convList");
+  const messagesDiv = document.getElementById("messages");
+  const convMeta    = document.getElementById("convMeta");
+
+  async function callAdmin(path) {
+    const key = keyInput.value.trim();
+    if (!key) {
+      statusText.textContent = "⚠ Vul eerst de admin key in.";
+      return null;
+    }
+
+    statusText.textContent = "⏳ Laden...";
+    try {
+      const url = `${BASE_URL}${path}${path.includes("?") ? "&" : "?"}key=${encodeURIComponent(key)}`;
+      const res = await fetch(url);
+      if (!res.ok) {
+        statusText.textContent = `⚠ Fout ${res.status}: ${res.statusText}`;
+        return null;
+      }
+      const data = await res.json();
+      statusText.textContent = "✅ Gelukt";
+      return data;
+    } catch (err) {
+      console.error(err);
+      statusText.textContent = "⚠ Netwerkfout of backend niet bereikbaar.";
+      return null;
+    }
+  }
+
+  // =========================
+  //  OVERZICHT (STATS)
+  // =========================
+  document.getElementById("btnLoadSummary").addEventListener("click", async () => {
+    // backend heeft /admin/stats
+    const data = await callAdmin("/admin/stats");
+    if (!data) return;
+
+    console.log("admin/stats →", data);
+
+    summaryDiv.innerHTML = "";
+
+    const usersCount  = typeof data.users === "number"        ? data.users        : 0;
+    const convCount   = typeof data.conversations === "number"? data.conversations: 0;
+    const msgCount    = typeof data.messages === "number"     ? data.messages     : 0;
+    const lastMessage = data.last_message || null;
+
+    function card(label, value) {
+      const div = document.createElement("div");
+      div.className = "summary-item";
+      div.innerHTML = `<span class="value">${value}</span>${label}`;
+      summaryDiv.appendChild(div);
+    }
+
+    card("Users",        usersCount);
+    card("Conversaties", convCount);
+    card("Berichten",    msgCount);
+
+    if (lastMessage) {
+      const div = document.createElement("div");
+      div.className = "summary-item";
+      div.innerHTML = `
+        <span class="value">Laatste bericht</span>
+        convo #${lastMessage.conversation_id || "-"}<br/>
+        <small>${formatDate(lastMessage.created_at)}</small>
+      `;
+      summaryDiv.appendChild(div);
+    }
+  });
+
+  // =========================
+  //  CONVERSATIE-LIJST
+  // =========================
+  document.getElementById("btnLoadConversations").addEventListener("click", async () => {
+    const data = await callAdmin("/admin/conversations");
+    if (!data) return;
+
+    console.log("admin/conversations →", data);
+
+    convList.innerHTML = "";
+    data.forEach((row) => {
+      const item = document.createElement("div");
+      item.className = "list-item";
+      item.innerHTML = `
+        <span class="conv-id">#${row.id}</span>
+        <span class="badge">${row.session_id}</span><br/>
+        <small>Laatst: ${formatDate(row.last_message_at)}</small>
+      `;
+      item.addEventListener("click", () => loadConversation(row.id));
+      convList.appendChild(item);
+    });
+  });
+
+  // =========================
+  //  BERICHTEN VAN 1 CONVERSATIE
+  // =========================
+  async function loadConversation(convId) {
+    const data = await callAdmin(`/admin/conversation/${convId}`);
+    if (!data) return;
+
+    console.log(`admin/conversation/${convId} →`, data);
+
+    // backend geeft een LIJST terug (array met berichten)
+    let messages;
+    if (Array.isArray(data)) {
+      messages = data;
+    } else if (data && Array.isArray(data.messages)) {
+      messages = data.messages;
+    } else {
+      messages = [];
+    }
+
+    messagesDiv.innerHTML = "";
+    convMeta.textContent = `Gesprek #${convId} – ${messages.length} berichten`;
+
+    messages.forEach((m) => {
+      const div = document.createElement("div");
+      div.className = "msg " + (m.role === "assistant" ? "assistant" : "user");
+      div.innerHTML = `
+        <div class="msg-role">${m.role}</div>
+        <pre>${m.content}</pre>
+        <div class="msg-meta">${formatDate(m.created_at)}</div>
+      `;
+      messagesDiv.appendChild(div);
+    });
+  }
+</script>
+
+
+</body>
+</html>

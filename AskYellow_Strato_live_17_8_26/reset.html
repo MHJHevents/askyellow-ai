@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AskYellow – Wachtwoord resetten</title>
+
+    <style>
+        body {
+            font-family: Poppins, sans-serif;
+            background: #020309;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .box {
+            background: #111;
+            padding: 25px;
+            border-radius: 14px;
+            max-width: 450px;
+            margin: 0 auto;
+            box-shadow: 0 0 30px rgba(255,215,0,0.25);
+        }
+
+        input {
+            width: 100%;
+            height: 48px;
+            line-height: 48px;
+            padding: 0 16px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #444;
+            background: #222;
+            color: white;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #FFD700;
+            color: #111;
+            border: none;
+            border-radius: 8px;
+            font-weight: 800;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .info {
+            font-size: 14px;
+            opacity: 0.85;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .success {
+            color: #7CFF7C;
+            margin-top: 12px;
+            font-weight: 600;
+        }
+
+        .error {
+            color: #ff6666;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 id="title">Wachtwoord resetten</h2>
+
+    <div class="box">
+
+        <!-- MODE 1: RESET-LINK AANVRAGEN -->
+        <div id="requestMode">
+            <p class="info">
+                Vul je e-mailadres in.<br>
+                Je ontvangt een link om een nieuw wachtwoord in te stellen.
+            </p>
+
+            <form id="requestForm" autocomplete="on">
+                <input id="email" type="email" placeholder="Emailadres" required />
+                <button type="submit">Reset-link aanvragen</button>
+            </form>
+
+            <div id="requestResult" class="success"></div>
+        </div>
+
+        <!-- MODE 2: NIEUW WACHTWOORD INSTELLEN -->
+        <div id="resetMode" class="hidden">
+            <p class="info">
+                Kies een nieuw wachtwoord.
+            </p>
+
+            <form id="resetForm">
+                <input id="newPassword"
+                       type="password"
+                       placeholder="Nieuw wachtwoord (min. 6 tekens)"
+                       autocomplete="new-password"
+                       required />
+
+                <input id="newPassword2"
+                       type="password"
+                       placeholder="Herhaal nieuw wachtwoord"
+                       autocomplete="new-password"
+                       required />
+
+                <button type="submit">Wachtwoord opslaan</button>
+            </form>
+
+            <div id="resetResult" class="success"></div>
+            <div id="resetError" class="error"></div>
+        </div>
+
+        <p style="margin-top:16px;">
+            <a href="login.html">← Terug naar inloggen</a>
+        </p>
+
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const token = params.get("token");
+
+        const requestMode = document.getElementById("requestMode");
+        const resetMode = document.getElementById("resetMode");
+        const title = document.getElementById("title");
+
+        // 🔁 MODE SWITCH
+        if (token) {
+            requestMode.classList.add("hidden");
+            resetMode.classList.remove("hidden");
+            title.textContent = "Nieuw wachtwoord instellen";
+        }
+
+        // MODE 1 — RESET-LINK AANVRAGEN
+        const form = document.getElementById("requestForm");
+        const result = document.getElementById("requestResult");
+
+        form?.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById("email").value.trim().toLowerCase();
+
+            // UX: altijd dezelfde boodschap
+            result.textContent =
+                "Als dit e-mailadres bestaat, ontvang je een reset-link.";
+
+            try {
+                const API_BASE =
+                    location.hostname === "askyellow.nl" || location.hostname === "www.askyellow.nl"
+                        ? "https://askyellow-ai.onrender.com"
+                        : "https://askyellow-staging.onrender.com";
+
+                await fetch(`${API_BASE}/auth/request-password-reset`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email })
+                });
+
+            } catch (err) {
+                console.error("Reset request failed:", err);
+            }
+        });
+
+        document.getElementById("resetForm")?.addEventListener("submit", async (e) => {
+                e.preventDefault();
+
+            const p1 = document.getElementById("newPassword").value.trim();
+            const p2 = document.getElementById("newPassword2").value.trim();
+            const err = document.getElementById("resetError");
+            const ok = document.getElementById("resetResult");
+
+            err.textContent = "";
+            ok.textContent = "";
+
+            if (p1.length < 6) {
+                err.textContent = "Wachtwoord moet minimaal 6 tekens zijn.";
+            return;
+      }
+            if (p1 !== p2) {
+                err.textContent = "Wachtwoorden komen niet overeen.";
+            return;
+      }
+
+            const API_BASE =
+            location.hostname === "askyellow.nl" || location.hostname === "www.askyellow.nl"
+            ? "https://askyellow-ai.onrender.com"
+            : "https://askyellow-staging.onrender.com";
+
+            try {
+        const res = await fetch(`${API_BASE}/auth/reset-password`, {
+                method: "POST",
+            headers: {"Content-Type": "application/json" },
+            body: JSON.stringify({
+                token,
+                password: p1
+          })
+        });
+
+            if (!res.ok) throw new Error("Reset failed");
+
+            ok.textContent = "Wachtwoord succesvol gewijzigd. Je kunt nu inloggen.";
+        setTimeout(() => {
+                window.location.href = "login.html";
+        }, 1500);
+
+      } catch (e) {
+                err.textContent = "Resetten mislukt. Probeer opnieuw.";
+            console.error(e);
+      }
+});
+    </script>
+
+</body>
+</html>
+

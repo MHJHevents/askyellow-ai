@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YellowMind Chat</title>
+    <link rel="stylesheet" href="/css/chat.css">
+</head>
+
+<body>
+    <div id="app-shell">
+        <div class="chat-card">
+            <aside id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Menu</h3>
+                    <button id="sidebarClose" class="sidebar-close-btn" aria-label="Sluit menu">×</button>
+                </div>
+
+                <div class="sidebar-content">
+                    <div class="sidebar-menu">
+                        <button class="sidebar-btn" data-action="account">
+                            👤 <span>Account</span>
+                        </button>
+                        <button class="sidebar-btn" id="history-toggle">
+                            🕘 <span>Geschiedenis</span>
+                        </button>
+
+                        <div class="history-sub" id="historySub"></div>
+
+                        <button class="sidebar-btn" data-action="images">
+                            📁 <span>Afbeeldingen</span>
+                        </button>
+
+                        <div class="sidebar-spacer"></div>
+
+                        <button type="button" class="sidebar-btn danger" data-action="logout">
+                            🚪 <span>Uitloggen</span>
+                        </button>
+                    </div>
+                </div>
+            </aside>
+
+            <div id="chat-shell">
+                <div class="watermark"></div>
+                <div class="main-inner">
+                    <header class="chat-header">
+                        <div class="chat-header-left">
+                            <div class="chat-title-row">
+                                <div class="ym-menu">
+                                    <button id="menuToggle" class="ym-menu-btn">☰</button>
+                                </div>
+
+                                <span class="chat-title">YellowMind Chat</span>
+                            </div>
+                        </div>
+
+                        <button id="btn-close" class="chat-close-btn">×</button>
+                    </header>
+
+                    <div class="chat-stage">
+                        <main id="chatMessages" class="chat-messages"></main>
+
+                        <div id="yelloContainer" class="yello-chat-presence">
+                            <video id="yelloAvatar"
+                                   class="yello-chat-avatar"
+                                   autoplay
+                                   muted
+                                   loop
+                                   playsinline
+                                   preload="metadata">
+                                <source src="/img/yello_dansklap_trans.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <div id="uploadPreview" class="upload-preview" style="display:none;">
+                        <img id="uploadPreviewImg" alt="Preview" style="max-width:120px; max-height:120px; border-radius:12px;">
+                        <div style="display:flex; flex-direction:column; gap:8px;">
+                            <div id="uploadPreviewText">Afbeelding geselecteerd</div>
+                            <button id="removeUploadBtn" type="button">Verwijder afbeelding</button>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-row">
+                        <label for="chatImageInput" class="chat-upload-btn" title="Afbeelding uploaden">📎</label>
+                        <input id="chatImageInput"
+                               type="file"
+                               accept="image/png,image/jpeg,image/webp"
+                               hidden>
+
+                        <input id="chatInput"
+                               class="chat-input"
+                               type="text"
+                               placeholder="Typ je vraag voor YellowMind..."
+                               autocomplete="off" />
+
+                        <button id="sendChat" class="chat-send-btn">Verstuur</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/js/chat2.js"></script>
+</body>
+</html>
