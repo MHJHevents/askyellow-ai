@@ -1,2 +1,0 @@
-GitHub connector read/write test for askyellow/askyellow-ai
-Timestamp: 2026-08-18 Europe/Amsterdam
