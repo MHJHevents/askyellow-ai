@@ -3,6 +3,7 @@ uvicorn
 python-dotenv
 openai
 requests
+httpx
 bcrypt
 PyJWT
 psycopg2-binary
