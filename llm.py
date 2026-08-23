@@ -173,3 +173,51 @@ def call_yellowmind_llm(
 
     return final_answer, []
 
+def call_gabber_yello_llm(
+    question,
+    language="nl",
+    kb_answer=None,
+    sql_match=None,
+    hints=None,
+    history=None,
+):
+    """Dedicated Gabber Yello call layered on the existing production client."""
+    from core.personalities import GABBER_YELLO_PROFILE
+
+    hints = hints or {}
+    messages = [
+        {"role": "system", "content": MINIMAL_SYSTEM_PROMPT},
+        {"role": "system", "content": GABBER_YELLO_PROFILE},
+    ]
+
+    if hints.get("time_context"):
+        messages.append({"role": "system", "content": hints["time_context"]})
+    if hints.get("time_hint"):
+        messages.append({"role": "system", "content": hints["time_hint"]})
+    if kb_answer:
+        messages.append({
+            "role": "system",
+            "content": (
+                "Relevante MHJH-kennis voor deze vraag:\n"
+                f"{kb_answer}\n"
+                "Gebruik deze informatie als bron, maar formuleer natuurlijk als Gabber Yello."
+            ),
+        })
+
+    if history:
+        for msg in history:
+            content = msg.get("content")
+            if not isinstance(content, str):
+                continue
+            if content.startswith("[IMAGE]") or content.startswith("[USER_IMAGE]"):
+                continue
+            messages.append({
+                "role": msg.get("role", "user"),
+                "content": content[:2000],
+            })
+
+    messages.append({"role": "user", "content": question})
+    ai = client.chat.completions.create(model="gpt-4o-mini", messages=messages)
+    answer = ai.choices[0].message.content if ai.choices else None
+    return (answer or "⚠️ Gabber Yello had ff een vastlopertje. Vraag het nog eens."), []
+
