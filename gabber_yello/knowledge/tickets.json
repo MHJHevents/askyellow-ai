@@ -1,5 +1,25 @@
 {
   "topic": "tickets",
-  "keywords": ["ticket", "tickets", "kaartje", "kaartjes", "ticket kwijt", "kaartje kwijt", "mail kwijt", "ticketmail", "bestelling", "bestelmail", "toegang", "overdragen", "ticketoverdracht"],
-  "answer": "Tickets voor Den Haag Hakkûh worden digitaal verkocht en na een succesvolle bestelling digitaal gekoppeld aan het gebruikte e-mailadres. MijnMHJH is de belangrijkste en makkelijkste plek om tickets terug te vinden: als iemand een ticket of oorspronkelijke ticketmail kwijt is, wijs die persoon eerst op MijnMHJH en laat zo nodig controleren of wordt ingelogd met hetzelfde e-mailadres waarmee is besteld. Tickets kunnen via MijnMHJH worden overgedragen; de ontvanger krijgt een uitnodiging per e-mail en accepteert de overdracht. Actuele ticketprijzen, ticketfases, servicekosten, verkoopstatus en uitverkochte ticketsoorten horen in actuele publieke ticketinformatie en worden hier niet als vast gegeven ingevuld. Verzin geen voorwaarden over geldigheid, opnieuw scannen, leeftijd, restitutie, naamcontrole, tweedehands verkoop of andere toegangsregels wanneer die niet expliciet in actuele publieke MHJH-kennis staan."
+  "keywords": [
+    "ticket",
+    "tickets",
+    "kaartje",
+    "kaartjes",
+    "ticket kwijt",
+    "kaartje kwijt",
+    "mail kwijt",
+    "ticketmail",
+    "bestelling",
+    "bestelmail",
+    "qr code",
+    "qr-code",
+    "ticketshop",
+    "mollie",
+    "servicekosten",
+    "kortingscode",
+    "toegang",
+    "overdragen",
+    "ticketoverdracht"
+  ],
+  "answer": "Officiële tickets voor Den Haag Hakkûh II worden digitaal verkocht via de eigen MHJH-ticketshop. Betaling verloopt veilig via Mollie. Na succesvolle betaling worden unieke QR-tickets verstuurd naar het opgegeven e-mailadres; de koper moet dat adres daarom goed controleren. MijnMHJH is de makkelijkste plek om tickets terug te vinden wanneer wordt ingelogd met hetzelfde e-mailadres als bij de bestelling. Tickets kunnen via MijnMHJH worden verdeeld of overgedragen; de ontvanger accepteert een uitnodiging per e-mail. Ieder ticket heeft een unieke code of QR-code en kan maar één keer voor toegang worden gebruikt. Het evenement is 18+. Actuele prijzen, servicekosten, ticketfases, kortingscodes, verkoopstatus en maximale bestelhoeveelheid komen uitsluitend uit de live ticketshop en mogen niet worden gegokt. Aangeschafte tickets worden volgens de voorwaarden in beginsel niet teruggenomen of gerestitueerd. Voor veilige doorverkoop is er het officiële MHJH-resaleplatform."
 }

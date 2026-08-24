@@ -110,7 +110,7 @@ def get_user_history(conn, user_id: int, day: str | None = None, limit=50):
         JOIN messages m ON m.conversation_id = c.id
         WHERE c.user_id = %s
           AND {date_filter}
-        ORDER BY m.created_at ASC
+        ORDER BY m.created_at ASC, m.id ASC
         LIMIT %s
         """,
         (*params, limit)
@@ -144,7 +144,7 @@ def get_user_history_by_day(conn, user_id: int, day: str, limit: int = 200):
         JOIN messages m ON m.conversation_id = c.id
         WHERE c.user_id = %s
           AND c.conversation_date = %s
-        ORDER BY m.created_at ASC
+        ORDER BY m.created_at ASC, m.id ASC
         LIMIT %s
         """,
         (user_id, day, limit)
@@ -223,7 +223,7 @@ def get_history_for_model(conn, session_id: str, day: str | None = None, limit=3
         FROM messages
         WHERE conversation_id = %s
         {date_filter}
-        ORDER BY created_at ASC
+        ORDER BY created_at ASC, id ASC
         LIMIT %s
         """,
         tuple(params)
@@ -300,14 +300,14 @@ def get_history_for_llm(conn, session_id: str, limit=30):
             return []
 
     cur.execute("""
-        SELECT role, content
+        SELECT role, content, created_at
         FROM messages
         WHERE conversation_id = %s
-        ORDER BY created_at ASC
+        ORDER BY created_at DESC, id DESC
         LIMIT %s
     """, (conv_id, limit))
 
-    rows = cur.fetchall()
+    rows = list(reversed(cur.fetchall()))
 
     cleaned = []
     for r in rows:
@@ -341,7 +341,7 @@ def get_user_images(conn, user_id: int, limit: int = 50):
             m.content LIKE '[USER_IMAGE]%%'
             OR m.content LIKE '[IMAGE]%%'
           )
-        ORDER BY m.created_at DESC
+        ORDER BY m.created_at DESC, m.id DESC
         LIMIT %s
         """,
         (user_id, limit)

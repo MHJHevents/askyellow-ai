@@ -14,11 +14,18 @@ import unicodedata
 KNOWLEDGE_DIR = Path(__file__).resolve().parent.parent / "gabber_yello" / "knowledge"
 KNOWLEDGE_FILES = (
     "mhjh.json",
+    "gabber_yello.json",
     "event.json",
     "mijnmhjh.json",
     "lootjesjacht.json",
     "arcade.json",
     "lineup.json",
+    "tickets.json",
+    "whitehouse.json",
+    "partyinfo.json",
+    "merch.json",
+    "resale.json",
+    "partybus.json",
 )
 
 
@@ -53,21 +60,25 @@ def get_relevant_mhjh_context(message: str):
     if not q:
         return None
 
-    best_block = None
-    best_score = 0
+    scored_blocks = []
 
-    for block in _load_mhjh_knowledge():
+    for order, block in enumerate(_load_mhjh_knowledge()):
         score = 0
         for keyword in block.get("keywords", []):
             key = _normalize(keyword)
-            if key and key in q:
+            if key and f" {key} " in f" {q} ":
                 score += max(1, len(key.split()))
 
-        if score > best_score:
-            best_score = score
-            best_block = block
+        if score > 0:
+            scored_blocks.append((score, -order, block))
 
-    if not best_block:
+    if not scored_blocks:
         return None
 
-    return best_block.get("answer")
+    scored_blocks.sort(reverse=True, key=lambda item: (item[0], item[1]))
+    selected = [item[2] for item in scored_blocks[:2]]
+    return "\n\n".join(
+        block.get("answer", "")
+        for block in selected
+        if block.get("answer")
+    ) or None

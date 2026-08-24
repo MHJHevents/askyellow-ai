@@ -149,6 +149,24 @@ def init_db():
     cur.execute("ALTER TABLE auth_users ADD COLUMN IF NOT EXISTS account_role TEXT NOT NULL DEFAULT 'user';")
     cur.execute("ALTER TABLE auth_users ADD COLUMN IF NOT EXISTS subscription_status TEXT NOT NULL DEFAULT 'free';")
 
+    # Gabber Yello: gepseudonimiseerd accountgeheugen
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS gabber_yello_memories (
+        id BIGSERIAL PRIMARY KEY,
+        member_key TEXT NOT NULL,
+        fact_key TEXT NOT NULL,
+        fact_value TEXT NOT NULL,
+        source_text TEXT,
+        created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+        updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+        UNIQUE(member_key, fact_key)
+    );
+    """)
+    cur.execute("""
+    CREATE INDEX IF NOT EXISTS idx_gabber_yello_memories_member
+    ON gabber_yello_memories(member_key, updated_at DESC);
+    """)
+
     # Indexes
     cur.execute("CREATE INDEX IF NOT EXISTS idx_auth_users_email ON auth_users(email);")
     cur.execute("CREATE INDEX IF NOT EXISTS idx_auth_users_verify_token ON auth_users(verify_token);")
