@@ -7,6 +7,7 @@ import re
 from openai import OpenAI
 
 from chat_engine.db import get_conn
+from token_usage import log_ai_token_usage
 
 
 _MODEL = os.getenv("GABBER_MEMORY_MODEL", "gpt-4o-mini")
@@ -31,10 +32,7 @@ def get_gabber_memories(member_key: str, limit: int = 10) -> list[dict]:
             """,
             (member_key, limit),
         )
-        return [
-            {"key": row["fact_key"], "value": row["fact_value"]}
-            for row in cur.fetchall()
-        ]
+        return [{"key": row["fact_key"], "value": row["fact_value"]} for row in cur.fetchall()]
     finally:
         conn.close()
 
@@ -49,10 +47,7 @@ def clear_gabber_memories(member_key: str) -> int:
     conn = get_conn()
     try:
         cur = conn.cursor()
-        cur.execute(
-            "DELETE FROM gabber_yello_memories WHERE member_key = %s",
-            (member_key,),
-        )
+        cur.execute("DELETE FROM gabber_yello_memories WHERE member_key = %s", (member_key,))
         deleted = cur.rowcount
         conn.commit()
         return deleted
@@ -85,12 +80,13 @@ def learn_gabber_memories(member_key: str, user_text: str) -> None:
                         "gezondheid, middelengebruik, seksualiteit, religie, politiek, financiën, juridische "
                         "zaken, exacte locatie, contactgegevens, beveiligingsgegevens, tijdelijke stemming, "
                         "MijnMHJH-identiteit of officiële MHJH-feiten. Verzin en interpreteer niets. "
-                        "Geef JSON: {\"memories\":[{\"key\":\"snake_case\",\"value\":\"korte feitelijke zin\"}]}."
+                        "Geef JSON: {\"memories\":[{\"key\":\"snake_case\",\"value\":\"korte feitelijke zin\"}]} ."
                     ),
                 },
                 {"role": "user", "content": text[:1200]},
             ],
         )
+        log_ai_token_usage(result, feature="memory:gabber_yello", model=_MODEL)
         content = result.choices[0].message.content if result.choices else ""
         payload = json.loads(content or "{}")
         memories = payload.get("memories", [])
