@@ -38,6 +38,12 @@ from gabber_memory import (
     get_gabber_memories,
     learn_gabber_memories,
 )
+from music_recognition import (
+    MAX_UPLOAD_BYTES,
+    MusicRecognitionError,
+    check_music_rate_limit,
+    recognize_music,
+)
 
 router = APIRouter()
 
@@ -96,15 +102,39 @@ def _verified_mhjh_member(request: Request, payload: dict) -> dict | None:
     supplied = request.headers.get("x-mhjh-signature", "")
     secret = os.getenv("GABBER_YELLO_BRIDGE_SECRET", "").strip()
 
-    if not isinstance(context_json, str) or not timestamp or not supplied or len(secret) < 32:
+    def reject(reason: str) -> None:
+        print("GABBER_MEMBER_AUTH_REJECT " + json.dumps({
+            "event": "GABBER_MEMBER_AUTH_REJECT",
+            "reason": reason,
+            "has_context": isinstance(context_json, str),
+            "context_bytes": len(context_json.encode("utf-8")) if isinstance(context_json, str) else 0,
+            "has_timestamp": bool(timestamp),
+            "has_signature": bool(supplied),
+            "secret_configured": len(secret) >= 32,
+            "secret_fingerprint": hashlib.sha256(secret.encode("utf-8")).hexdigest()[:12] if secret else "",
+        }, separators=(",", ":")), flush=True)
+
+    if not isinstance(context_json, str):
+        reject("context_missing")
+        return None
+    if not timestamp:
+        reject("timestamp_missing")
+        return None
+    if not supplied:
+        reject("signature_missing")
+        return None
+    if len(secret) < 32:
+        reject("secret_missing_or_short")
         return None
 
     try:
         issued_at = int(timestamp)
     except (TypeError, ValueError):
+        reject("timestamp_invalid")
         return None
 
     if abs(int(time.time()) - issued_at) > 300:
+        reject("timestamp_expired")
         return None
 
     expected = hmac.new(
@@ -113,14 +143,20 @@ def _verified_mhjh_member(request: Request, payload: dict) -> dict | None:
         hashlib.sha256,
     ).hexdigest()
     if not hmac.compare_digest(expected, supplied):
+        reject("signature_mismatch")
         return None
 
     try:
         member = json.loads(context_json)
     except (TypeError, ValueError, json.JSONDecodeError):
+        reject("context_invalid_json")
         return None
 
-    if not isinstance(member, dict) or not member.get("public_id"):
+    if not isinstance(member, dict):
+        reject("context_not_object")
+        return None
+    if not member.get("public_id"):
+        reject("public_id_missing")
         return None
 
     return {
@@ -141,6 +177,57 @@ def _gabber_conversation_session(member: dict | None, browser_session_id: str) -
         hashlib.sha256,
     ).hexdigest()
     return f"gabber-yello-member:{digest}"
+
+
+@router.post("/gabber-yello/recognize-music")
+def gabber_yello_recognize_music(
+    request: Request,
+    member_context: str = Form(...),
+    file: UploadFile = File(...),
+):
+    member = _verified_mhjh_member(request, {"member_context": member_context})
+    if not member:
+        raise HTTPException(status_code=401, detail="member_required")
+
+    content_type = (file.content_type or "").lower()
+    audio_bytes = file.file.read(MAX_UPLOAD_BYTES + 1)
+    file.file.close()
+    if not audio_bytes or len(audio_bytes) > MAX_UPLOAD_BYTES:
+        raise HTTPException(status_code=413, detail="audio_too_large")
+
+    if not check_music_rate_limit(member["public_id"]):
+        raise HTTPException(status_code=429, detail="music_rate_limit")
+
+    try:
+        result = recognize_music(
+            member_public_id=member["public_id"],
+            filename=file.filename or "fragment",
+            content_type=content_type,
+            audio_bytes=audio_bytes,
+        )
+    except MusicRecognitionError as exc:
+        code = str(exc)
+        status = 503 if code in {"audd_not_configured", "provider_unavailable"} else 422
+        raise HTTPException(status_code=status, detail=code) from exc
+
+    if not result.get("matched"):
+        return {
+            "matched": False,
+            "reply": (
+                "Ik krijg hier geen betrouwbare herkenning uit, maat. "
+                "Het kan een live-edit, mash-up of te kort fragment zijn."
+            ),
+        }
+
+    artist = result["artist"]
+    title = result["title"]
+    return {
+        **result,
+        "reply": (
+            f"Maat, dit lijkt op {artist} – {title} 🔥 "
+            "Bij een live-edit, remix of mash-up kan dit wel de oorspronkelijke track zijn."
+        ),
+    }
 
 
 @router.get("/chat/history")
