@@ -2,7 +2,7 @@
 
 ## Artiesten, dj’s, producers, MC’s en liveacts
 
-**Status:** concept ter controle door Dennis  
+**Status:** inhoudelijk goedgekeurd door Dennis op 29 oktober 2026; basis behouden en gecontroleerde verdieping toegevoegd  
 **Doel:** belangrijke namen herkennen, rollen correct benoemen en geen aliassen, formaties of optredens verzinnen  
 **Aansluiting:** ronde 1 bevat de geschiedenis, stijlen, cultuur, scenetaal en BPM-richtwaarden.
 
@@ -140,7 +140,7 @@ Nederlandse hardcore-dj en producer, lid van The Dreamteam. Sterk verbonden met 
 
 Nederlandse dj en producer, lid van The Dreamteam. Bekend uit de vroege hardcore- en gabberperiode en nog altijd een herkenbare naam binnen early-evenementen en klassieke hardcore.
 
-**MHJH-context:** bij Den Haag Hakkûh II staat **Gizmo b2b The Darkraver** op de mainstage. Dit is een B2B-set, geen nieuw permanent duo.
+**MHJH-context:** in de historische programmering voor Den Haag Hakkûh II van 17 oktober 2026 stond **Gizmo b2b The Darkraver** op de mainstage. Dit is een B2B-set, geen nieuw permanent duo.
 
 ---
 
@@ -252,6 +252,8 @@ Partyraiser is een Nederlandse hardcore-dj die bekend werd om snel, hard en ener
 
 Dr. Peacock is een Nederlandse dj en producer en een van de bekendste vertegenwoordigers van frenchcore. Zijn muziek combineert het snelle frenchcoreritme vaak met uitgesproken melodieën en invloeden uit verschillende muzikale culturen.
 
+Dr. Peacock is de artiestennaam van Stefan Dekker. Zijn Trip to reeks verbindt frenchcore met invloeden uit uiteenlopende landen en muziekculturen. Peacock in Concert is een afzonderlijk concertconcept waarin elektronische muziek met live muzikanten wordt gecombineerd; dat maakt niet iedere reguliere Dr. Peacock dj-set automatisch een liveact.
+
 ### Sefa
 
 Sefa is een Nederlandse dj, producer en muzikant die bekend werd met melodieuze frenchcore. Piano, klassieke en orkestrale invloeden spelen regelmatig een opvallende rol in zijn muziek en shows.
@@ -302,15 +304,17 @@ Deze namen zijn extra belangrijk voor Gabber Yello. Hij is onderdeel van de MHJH
 
 The Darkraver is een Nederlandse dj en entertainer met een lange geschiedenis in hardcore, early rave, oldschool en freestyle. Hij staat bekend om brede platenkeuze, humor, energie en sterke interactie met het publiek.
 
-**MHJH-context:** The Darkraver trad op tijdens de eerste editie van Komt Tie Dan He en staat bij Den Haag Hakkûh II aangekondigd als **Gizmo b2b The Darkraver**.
+**MHJH-context:** The Darkraver trad op tijdens de eerste editie van Komt Tie Dan He en stond voor Den Haag Hakkûh II van 17 oktober 2026 aangekondigd als **Gizmo b2b The Darkraver**.
 
 ### DJ Gizmo
 
-Gizmo is lid van The Dreamteam en een sleutelfiguur uit de vroege hardcore. Voor MHJH draait hij bij Den Haag Hakkûh II back-to-back met The Darkraver.
+Gizmo is lid van The Dreamteam en een sleutelfiguur uit de vroege hardcore. Voor Den Haag Hakkûh II van 17 oktober 2026 was hij aangekondigd voor een back-to-back met The Darkraver.
 
 ### MC Ruffian
 
 Ruffian is een Nederlandse hardcore-MC met een zeer herkenbare rauwe stem en lange staat van dienst op grote hardcore-evenementen. Zijn rol is MC en performer; noem hem niet automatisch de producer van tracks waarop zijn stem voorkomt.
+
+MHJH-aanvulling van Dennis en Fer: Ruffian treedt ook als dj op en heeft bij MHJH een dj-set gedraaid. Dennis en Fer beoordelen die set positief. Gabber Yello mag dus zowel zijn MC-rol als zijn dj-rol benoemen, maar controleert bij een concreet optreden welke rol aangekondigd is.
 
 **Niet verwarren:** MC Ruffian is niet DJ Ruffneck.
 
@@ -322,11 +326,11 @@ The Viper is een Nederlandse hardcore-dj en producer met een lange carrière van
 
 The Navigator is een dj binnen de hardcore- en earlyscene en onderdeel van de MHJH-familie. Gebruik voor specifieke biografische details uitsluitend gecontroleerde MHJH-informatie of een betrouwbare artiestenbron.
 
-**MHJH-context:** aangekondigd als **The Navigator b2b TKK3N** bij Den Haag Hakkûh II.
+**MHJH-context:** voor Den Haag Hakkûh II van 17 oktober 2026 aangekondigd als **The Navigator b2b TKK3N**.
 
 ### TKK3N
 
-TKK3N is een dj binnen de MHJH-line-up en draait bij Den Haag Hakkûh II back-to-back met The Navigator. Let op de officiële schrijfwijze met twee K’s en het cijfer 3: **TKK3N**.
+TKK3N is een dj binnen de MHJH-line-up en was voor Den Haag Hakkûh II van 17 oktober 2026 aangekondigd voor een back-to-back met The Navigator. Let op de officiële schrijfwijze met twee K’s en het cijfer 3: **TKK3N**.
 
 TKK3N vormde vijftig procent van de originele bezetting van **Human Resource**, een bekend duo uit de begintijd van de hardcore.
 
@@ -340,7 +344,7 @@ Mindfuck is een dj/artiest binnen de MHJH-line-up. Ook hier geldt: de naam is ni
 
 ### Hans Glock
 
-Hans Glock is een Haagse dj, entertainer en bekende binnen de MHJH-kring. Hij is daarnaast een opkomende producer en maakt covers en remixes, onder meer in samenwerking met **Ruthless** en **Dr. Rude**. Bij Den Haag Hakkûh II staat hij als **Hans Glock** aangekondigd. Een formulering met *presents* alleen gebruiken wanneer die op de actuele officiële line-up staat.
+Hans Glock is een Haagse dj, entertainer en bekende binnen de MHJH-kring. Hij is daarnaast een opkomende producer en maakt covers en remixes, onder meer in samenwerking met **Ruthless** en **Dr. Rude**. Voor Den Haag Hakkûh II van 17 oktober 2026 stond hij als **Hans Glock** aangekondigd. Een formulering met *presents* alleen gebruiken wanneer die op de actuele officiële line-up staat.
 
 ### Outsiders
 
@@ -348,11 +352,11 @@ Outsiders is een Nederlandse dj en producer die vooral bekend is vanuit hardstyl
 
 De jarenlange samenwerking met The Darkraver heeft een belangrijke rol gespeeld in de ontwikkeling van Outsiders tot de artiest die hij nu is.
 
-**MHJH-context:** Outsiders verzorgt de **Closing Set** bij Den Haag Hakkûh II. Closing set betekent de afsluitende set; niet automatisch dat alle muziek hardcore is.
+**MHJH-context:** Outsiders was voor de **Closing Set** bij Den Haag Hakkûh II van 17 oktober 2026 aangekondigd. Closing set betekent de afsluitende set; niet automatisch dat alle muziek hardcore is.
 
 ### Talentstage Den Haag Hakkûh II
 
-De aangekondigde talentstage bestaat uit:
+De voor Den Haag Hakkûh II van 17 oktober 2026 aangekondigde talentstage bestond uit:
 
 - DJ Atif Sayin;
 - DJ Stick;
@@ -399,7 +403,7 @@ Gabber Yello noemt hen als artiesten van de talentstage. Hij verzint geen echte 
 
 ### Vraag: “Is Outsiders een hardcore-dj?”
 
-> Outsiders zit vooral in hardstyle, freestyle en bredere harddance. Dus ik zou hem niet puur als hardcore-dj bestempelen. Maar met z’n harde, feestgerichte sound kan hij een zaal natuurlijk wel prima afsluiten — bij Den Haag Hakkûh II doet hij de closing set.
+> Outsiders zit vooral in hardstyle, freestyle en bredere harddance. Dus ik zou hem niet puur als hardcore-dj bestempelen. Maar met z’n harde, feestgerichte sound kan hij een zaal natuurlijk wel prima afsluiten — bij Den Haag Hakkûh II op 17 oktober 2026 stond hij voor de closing set aangekondigd.
 
 ### Vraag: “Treedt 3 Steps Ahead nog op?”
 
@@ -438,3 +442,112 @@ Graag extra kritisch kijken naar:
 - [DJ The Prophet kondigt zijn terugkeer aan](https://hardnews.nl/en/dj-the-prophet-returns-to-the-stage/) — afscheid in 2023 en terugkeer achter de draaitafels in 2026.
 - [Mysteryland, 4 juli 1998 — live-uitgave](https://www.discogs.com/release/6479537-Various-Thunderdome-Live-Recorded-At-Mystery-Land4th-Of-July-1998) — registratie met het optreden van 3 Steps Ahead.
 - Officiële MHJH-line-up en interne artiesteninformatie zijn leidend voor de MHJH-sectie.
+
+---
+
+## Goedgekeurde verdieping ronde 2
+
+### Een artiestennaam kan meerdere tijdvakken hebben
+
+Artiesten veranderen soms van stijl, label, alias, podiumvorm of publiek. Een naam die in de jaren negentig early hardcore draaide, kan later industrial, hardstyle, freestyle, frenchcore of een andere vorm van harddance maken. Dat maakt de eerdere periode niet onwaar en de latere periode niet automatisch minder relevant.
+
+Gabber Yello koppelt daarom altijd een artiest aan de juiste periode en context. “Bekend van hardcore” is vaak veiliger dan iemand voor zijn hele loopbaan aan één substijl vast te pinnen.
+
+### Extra vroege en invloedrijke namen
+
+### DJ Promo
+
+DJ Promo is de artiestennaam van Sebastian Hoff, een Nederlandse dj en producer die een belangrijke rol speelde in de ontwikkeling van donkere, technisch gedreven en industrialgerichte hardcore. Hij was verbonden aan The Third Movement. Zijn naam past niet alleen bij één vaste periode: zijn producties en sets laten verschillende kanten van de hardcorescene zien.
+
+### Omar Santana
+
+Omar Santana is een Amerikaanse dj en producer die een belangrijke rol speelde in de vroege Amerikaanse hardcore- en gabberscene. Zijn naam helpt duidelijk maken dat hardcore niet uitsluitend een Nederlands verhaal werd; er ontstonden ook buiten Nederland eigen scenes, labels en producties.
+
+### Scott Brown
+
+Scott Brown is een Schotse dj en producer die een grote rol speelde in de Britse hardcore, happy hardcore en harddance. Hij is een goed voorbeeld van een artiest die verschillende harde stijlen en publieken met elkaar verbond.
+
+### The Speed Freak
+
+The Speed Freak is een alias die verbonden is aan snelle, harde en experimentele hardcore. Bij aliassen met een lange geschiedenis moet Gabber Yello niet zonder controle een volledige burgerlijke naam, discografie of actuele bezetting invullen.
+
+### Industrial, crossbreed en extreme hardcore
+
+### Hellfish
+
+Hellfish is een Britse dj en producer die sterk verbonden is met breakcore, industrial hardcore en experimentele harde elektronische muziek. Zijn sound laat zien dat hardcore niet altijd rechtlijnig of uitsluitend op een vierkwartskick hoeft te leunen.
+
+### Radium
+
+Radium is een Franse producer en dj die bekend is binnen frenchcore, industrial en harde crossoverstijlen. Gebruik hem als voorbeeld van de Franse en internationale ontwikkeling van extreme hardcore, maar vermijd stellige uitspraken over één definitieve stijlindeling.
+
+### Tieum
+
+Tieum is een Franse hardcoreproducer en dj die verbonden is met harde, donkere en snelle producties. Hij is een bruikbare naam wanneer iemand vraagt naar Franse hardcore buiten de bekendste frenchcore-hoofdstroming.
+
+### The Satan
+
+The Satan is een hardcoreartiest afkomstig uit Rusland. Zijn sound combineert invloeden uit hardcore, drum-and-bass en breakcore. Actuele optredens, labels en samenwerkingen moeten apart worden gecontroleerd.
+
+### Liveact is een podiumvorm, geen kwaliteitsstempel
+
+Een liveact kan technisch indrukwekkend zijn, maar “live” zegt niet automatisch dat een act beter, echter of volledig geïmproviseerd is. De precieze verhouding tussen vooraf voorbereide onderdelen en live bediening verschilt per artiest. Gabber Yello beschrijft daarom wat zeker bekend is, zonder backstage-techniek te verzinnen.
+
+Ook een dj-set kan bijzonder interactief, technisch en uniek zijn. Het verschil tussen dj-set en liveact gaat vooral over de vorm waarin muziek wordt uitgevoerd, niet over een rangorde.
+
+### Meccano Twins
+
+Meccano Twins is een Italiaans hardcoreproject dat bekend is binnen darkcore, industrial en moderne hardcore. Het project is een voorbeeld van een act waarbij een herkenbare naam niet automatisch alle individuele personen achter verschillende producties of optredens verklaart.
+
+### MC’s verdienen een eigen plek
+
+Een MC kan een act, zaal en publiek aan elkaar verbinden. De beste MC’s weten wanneer zij energie moeten toevoegen en wanneer de track ruimte nodig heeft. Hun bijdrage is niet altijd zichtbaar in streamingcredits, maar op een feest kan een MC de herinnering aan een set sterk bepalen.
+
+### MC Joe
+
+MC Joe is langdurig verbonden aan DJ Rob. Wanneer Gabber Yello over DJ Rob en MC Joe praat, mag hij dit als een herkenbaar duo in de scene beschrijven. Hij moet hun samenwerking niet verwarren met een vaste productieact of met andere artiesten die Joe heten.
+
+### MC Ruffian en MC Raw naast elkaar houden
+
+MC Ruffian en MC Raw zijn twee verschillende namen. Ruffian is sterk verbonden met grote hardcore-evenementen en een herkenbare rauwe stem. MC Raw hoort bij de oorspronkelijke RTC-bezetting en keerde na een langere periode van gezondheidsproblemen weer regelmatiger terug op het podium. Gebruik bij actuele optredens altijd een recente bron.
+
+### Samenwerkingen correct benoemen
+
+- Een gezamenlijke track maakt artiesten niet automatisch een permanent duo.
+
+- Een B2B is in beginsel één gezamenlijke set, geen nieuwe artiestennaam.
+
+- Een MC-feature is niet hetzelfde als een productiecredit.
+
+- Een labelrelease bewijst niet automatisch wie alle onderdelen van een track heeft gemaakt.
+
+- Een tribute is niet hetzelfde als een nieuw optreden van een overleden artiest.
+
+- Een presents-show is niet automatisch een aparte liveact of vaste groep.
+
+### Vraag: “Wie is de belangrijkste hardcore-dj ooit?”
+
+“Daar bestaat geen neutrale ranglijst voor. Je kunt wel uitleggen welke artiesten belangrijk waren voor een bepaalde periode, stad, stijl, techniek of ontwikkeling. Voor mij persoonlijk staat Gizmo heel hoog, maar dat is smaak en geen officieel oordeel.”
+
+### Vraag: “Is een artiest die hardstyle draait dan geen hardcoreartiest meer?”
+
+“Niet automatisch. Artiesten bewegen door stijlen en periodes. Kijk naar de volledige loopbaan en benoem de context van het moment waar de vraag over gaat.”
+
+### Vraag: “Wie is die dj met die ene bekende naam?”
+
+“Dat kan ik niet betrouwbaar bepalen zonder extra context. Noem de track, het feest, de periode of het land, dan kan ik de juiste artiest onderscheiden van naamgenoten.”
+
+### Bronverwijzingen bij de nieuwe artiestenprofielen
+
+- The Satan: Masters of Hardcore, interview met de artiest; herkomst Rusland en invloeden hardcore, drum-and-bass en breakcore. https://www.mastersofhardcore.com/interview-the-satan/
+- Dr. Peacock: eigen artiestenwebsite; Stefan Dekker, Trip to reeks en Peacock in Concert. https://www.dr-peacock.com/about
+- Scott Brown: Mokum Records; Schotse achtergrond, Q-Tex en Evolution. https://mokumrecords.nl/scott-brown/
+- Omar Santana: Cyndium en Insomniac artiestenprofielen; Amerikaanse dj en producer, hardcore en breaks. https://cyndium.com/artists/omar-santana/ en https://www.insomniac.com/music/artists/omar-santana/
+- The Speed Freak: Mokum Records en eigen SoundCloud; project van Martin Damm en brede harde elektronische achtergrond. https://mokumrecords.nl/the-speed-freak/ en https://soundcloud.com/thespeedfreak_official
+- Hellfish: Electrobooking; Britse hardcore en Deathchant achtergrond. https://www.electrobooking.com/artist/hellfish
+- Radium: Electrobooking; Franse hardcore en frenchcore achtergrond. https://www.electrobooking.com/artist/radium
+- Meccano Twins: Q-dance artiestenprofiel; Italiaanse hardcoreprojectgeschiedenis. https://www.q-dance.com/artists/31842892
+- Promo: The Third Movement bedrijfsprofiel; Sebastian Hoff en de oprichting van het label. https://nl.linkedin.com/company/the-third-movement
+- Tieum: artiestenbiografie op Partyflock; Franse achtergrond en harde industrialgerichte sound. https://partyflock.nl/artist/4947:Tieum
+
+Broncontrole: 29 oktober 2026. Een historische biografie bewijst geen actuele boekbaarheid. Ruffians dj-set bij MHJH is bevestigd door Dennis en Fer.
