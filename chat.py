@@ -31,7 +31,19 @@ from image_shared import (
 )
 
 from llm import call_yellowmind_llm, call_gabber_yello_llm
-from gabber_web import format_web_context, search_web_for_gabber, should_search_web
+from gabber_context import resolve_gabber_context, reviewed_edition_pause_reply
+from gabber_web import (
+    UNCONFIRMED_WEB_REPLY,
+    build_gabber_web_query,
+    filter_gabber_event_results,
+    filter_gabber_web_results,
+    find_mhjh_lineup_overlap,
+    format_web_context,
+    get_official_mhjh_ticket_url,
+    search_web_for_gabber,
+    select_gabber_citations,
+    should_search_web,
+)
 from gabber_memory import (
     clear_gabber_memories,
     format_gabber_memories,
@@ -436,27 +448,117 @@ def gabber_yello_chat(payload: dict, request: Request, background_tasks: Backgro
             "member_recognized": bool(member),
         }
 
-    mhjh_context = get_relevant_mhjh_context(message)
-    if not mhjh_context and history:
-        recent_user_context = [
-            item["content"]
-            for item in history[-8:]
-            if item.get("role") == "user" and isinstance(item.get("content"), str)
-        ]
-        if recent_user_context:
-            mhjh_context = get_relevant_mhjh_context(
-                "\n".join(recent_user_context + [message])
-            )
+    topic = resolve_gabber_context(message, history)
+    web_query, event_lookup = build_gabber_web_query(message, history, resolved=topic)
+    if topic.needs_clarification and (topic.subjects or not event_lookup):
+        answer = topic.clarification
+        store_message_pair(conversation_session, message, answer)
+        return {
+            "reply": answer,
+            "personality": "gabber_yello",
+            "knowledge_used": False,
+            "memory_used": False,
+            "web_used": False,
+            "sources": [],
+            "member_recognized": bool(member),
+        }
+
+    # Re-retrieve for the resolved topic even if a vague sentence had weak matches.
+    mhjh_context = get_relevant_mhjh_context(topic.query)
+    if topic.instruction:
+        hints["topic_context"] = topic.instruction
+    if topic.current or topic.year is not None:
+        hints["time_context"] = build_time_context()
 
     web_results = []
-    if should_search_web(message, bool(mhjh_context)):
+    if event_lookup:
+        hints["event_lookup_query"] = web_query
+        if not hints.get("time_context"):
+            hints["time_context"] = build_time_context()
+    if event_lookup or should_search_web(message, bool(mhjh_context)) or should_search_web(topic.query, bool(mhjh_context)):
         try:
-            web_results = search_web_for_gabber(message)
+            raw_web_results = search_web_for_gabber(web_query, limit=6)
+            web_results = filter_gabber_web_results(raw_web_results, web_query, topic.subjects)
+            if event_lookup:
+                web_results = filter_gabber_event_results(raw_web_results, web_query)
+                import re
+
+                is_lineup_lookup = bool(re.search(r"line[\s-]?up|lineup", message or "", re.IGNORECASE))
+                if not web_results or is_lineup_lookup:
+                    # If a city/date-matched search result names the event but
+                    # omits the year or full venue in its snippet, use its title
+                    # to refine the query. The refined results still pass the
+                    # same exact date and city checks below.
+                    place_match = re.search(
+                        r"\bhardcore\s+party\s+(.+?)\s+\d{1,2}\s+[a-z]+\s+\d{4}\b",
+                        web_query,
+                        re.IGNORECASE,
+                    )
+                    date_match = re.search(r"\b\d{1,2}\s+[a-z]+\s+\d{4}\b", web_query, re.IGNORECASE)
+                    if place_match and date_match:
+                        place = place_match.group(1).strip()
+                        date_text = date_match.group(0)
+                        for item in raw_web_results:
+                            result_text = " ".join((item.get("title", ""), item.get("snippet", "")))
+                            if not re.search(r"(?<!\w)" + re.escape(place) + r"(?!\w)", result_text, re.IGNORECASE):
+                                continue
+                            if not re.search(r"\b" + re.escape(date_text.split()[0]) + r"\s+[a-z]+\b", result_text, re.IGNORECASE):
+                                continue
+                            title = item.get("title", "")
+                            title_date = re.search(r"\b\d{1,2}\s+[a-z]+\b", title, re.IGNORECASE)
+                            event_name = title[:title_date.start()].strip(" -–—…") if title_date else ""
+                            if event_name:
+                                stop_words = {"the", "a", "an", "de", "het", "huize", "maas", "hardcore", "party", "feest", "line", "up", *place.lower().split()}
+                                event_tokens = [token for token in re.findall(r"[a-z0-9]+", event_name.lower()) if token not in stop_words]
+                                event_core = " ".join(token for token in event_name.split() if re.sub(r"[^a-z0-9]", "", token.lower()) not in stop_words) or event_name
+                                query_place = "" if re.search(r"(?<!\w)" + re.escape(place) + r"(?!\w)", event_name, re.IGNORECASE) else place
+                                query_tail = web_query[date_match.end():].strip()
+                                refined_query = " ".join(part for part in (event_core, query_place, date_text, query_tail) if part)
+                                refined_results = search_web_for_gabber(refined_query, limit=6)
+                                refined_matches = filter_gabber_event_results(refined_results, web_query)
+                                if refined_matches:
+                                    web_results = refined_matches
+                                if refined_matches:
+                                    # A second search can surface a fuller artist list
+                                    # whose snippet omits the date. Add it only when
+                                    # the same distinctive event title and city match
+                                    # an already date-confirmed result.
+                                    lineup_query = f"{event_core} {query_place} {date_text} complete line-up"
+                                    lineup_results = search_web_for_gabber(lineup_query, limit=6)
+                                    required_matches = 2 if len(event_tokens) > 1 else 1
+                                    known_urls = {item.get("url") for item in web_results}
+                                    for item in lineup_results:
+                                        if item.get("url") in known_urls:
+                                            continue
+                                        listing_text = " ".join((item.get("title", ""), item.get("snippet", "")))
+                                        if not re.search(r"(?<!\w)" + re.escape(place) + r"(?!\w)", listing_text, re.IGNORECASE):
+                                            continue
+                                        if len([token for token in event_tokens if re.search(r"(?<!\w)" + re.escape(token) + r"(?!\w)", listing_text, re.IGNORECASE)]) < required_matches:
+                                            continue
+                                        if not re.search(r"line[\s-]?up|lineup|artists?|artiesten|djs?", listing_text, re.IGNORECASE):
+                                            continue
+                                        web_results.append(item)
+                                        known_urls.add(item.get("url"))
+                                    break
+                    if not web_results:
+                        # General search can bury exact listings under unrelated
+                        # events. Retry against DJGuide while keeping the same
+                        # exact date and city checks.
+                        fallback_query = f"site:djguide.nl/party {web_query}"
+                        fallback_results = search_web_for_gabber(fallback_query, limit=6)
+                        web_results = filter_gabber_event_results(fallback_results, web_query)
+            if topic.subjects:
+                # Date-matching events about a different named festival are not evidence.
+                web_results = filter_gabber_web_results(web_results, web_query, topic.subjects)
+            lineup_overlap = find_mhjh_lineup_overlap(web_results)
+            if lineup_overlap:
+                hints["mhjh_lineup_overlap"] = lineup_overlap
             web_context = format_web_context(web_results)
             hints["web_search_succeeded"] = bool(web_results)
             hints["web_context"] = web_context or (
-                "De internetzoekopdracht leverde geen bruikbare resultaten op. "
-                "Zeg eerlijk dat je online niets betrouwbaars hebt gevonden."
+                "De internetzoekopdracht leverde geen bronnen op die het bedoelde onderwerp en de gevraagde feiten of periode ondersteunen. "
+                "Zeg dat je het online niet betrouwbaar kunt bevestigen, niet dat er niets bestaat. "
+                "Concrete gedateerde feiten uit de gecontroleerde kennis mag je wel benoemen, maar niet als nieuw online bevestigd."
             )
         except Exception as exc:
             print(f"Gabber Yello web search failed: {type(exc).__name__}: {exc}")
@@ -481,6 +583,21 @@ def gabber_yello_chat(payload: dict, request: Request, background_tasks: Backgro
 
     if not answer:
         answer = "⚠️ Gabber Yello had ff een vastlopertje. Vraag het nog eens."
+
+    answer, web_results = select_gabber_citations(answer, web_results)
+    if answer == UNCONFIRMED_WEB_REPLY:
+        answer = reviewed_edition_pause_reply(topic, mhjh_context) or answer
+
+    if hints.get("mhjh_lineup_overlap") and web_results:
+        artists = ", ".join(hints["mhjh_lineup_overlap"])
+        verb = "staat" if len(hints["mhjh_lineup_overlap"]) == 1 else "staan"
+        ticket_url = get_official_mhjh_ticket_url()
+        if ticket_url:
+            answer = (
+                f"{answer}\n\n"
+                f"Leuke overlap: {artists} {verb} ook op de line-up van Den Haag Hakkûh II "
+                f"op 17 oktober in Whitehouse Scheveningen. Tickets: {ticket_url}"
+            )
 
     if web_results:
         source_lines = [

@@ -2,7 +2,7 @@
 
 ## Kleding, dansstijl en typische gebruiken
 
-**Status:** concept ter controle door Dennis  
+**Status:** goedgekeurd door Dennis op 30 oktober 2026; uitbreiding en correcties verwerkt voor staging  
 **Doel:** gabberkleding, hakken, veranderingen tussen generaties en scenegebruiken correct en zonder karikaturen uitleggen  
 **Aansluiting:** ronde 1 behandelt stijlen en taal; ronde 2 artiesten; ronde 3 feesten, clubs en geschiedenis.
 
@@ -328,7 +328,7 @@ Grote hallen en festivals zijn druk en telefoons werken niet altijd goed. Een he
 
 ### Kluis en kleding
 
-Veel bezoekers bergen jas, tas en waardevolle spullen op in een kluis. Bij Whitehouse bevinden de lockers zich in de kelder en kosten zij volgens de actuele MHJH-informatie €6.
+Veel bezoekers bergen hun jas of tas op in een kluis. Beschikbaarheid, plaats, prijs en voorwaarden controleer je bij de informatie van de concrete editie.
 
 ### Water, rust en op elkaar letten
 
@@ -432,24 +432,6 @@ De huidige scene is niet minder echt omdat zij anders functioneert. De jaren neg
 
 ---
 
-## 26. Controlelijst voor Dennis
-
-Graag extra kritisch kijken naar:
-
-- Welke merken en kledingcombinaties ontbreken?
-- Hoe werden Aussies en Cavello’s in jouw tijd werkelijk gecombineerd en gedragen?
-- Welke Air Max-modellen waren per periode het belangrijkst?
-- Klopt de beschrijving van klassiek hakken technisch en qua gevoel?
-- Hoe veranderde hakken volgens jou van early naar millennium en uptempo?
-- Welke armgebaren en typische bewegingen ontbreken?
-- Welke vaste rituelen hadden jullie vóór, tijdens en na een feest?
-- Welke regels op de dansvloer waren ongeschreven maar voor iedereen duidelijk?
-- Welke verschillen zag je tussen mannen- en vrouwenkleding zonder in clichés te vervallen?
-- Welke verzamelobjecten waren toen belangrijk en welke zijn dat pas later geworden?
-- Welke moderne gebruiken vindt de oude generatie raar — en andersom?
-- Welke uitspraken klinken nog als een modejournalist in een geleende Aussie?
-
----
 
 ## Bronnen en verificatieroute
 
@@ -460,3 +442,137 @@ Graag extra kritisch kijken naar:
 - [Gabber — cultuurhistorisch overzicht](https://en.wikipedia.org/wiki/Gabber) — brede kapstok; specifieke kleding- en politieke claims worden voorzichtig gebruikt.
 - [Gabbercultuur en kleding — Dazed](https://www.dazeddigital.com/fashion/article/43906/1/gabber-style-culture-oakley-90s) — klassieke look en blijvende mode-invloed.
 - Officiële MHJH-informatie is leidend voor praktische informatie over eigen evenementen.
+
+---
+
+## Goedgekeurde verdieping van ronde 4
+
+Peildatum 30 oktober 2026. De onderstaande verdieping sluit aan op de basis over kleding, dans en scenegebruiken.
+
+## 1 Australian is Italiaans en heeft tenniswortels
+
+De naam Australian verwijst niet naar een Australische oorsprong van het kledingbedrijf. Volgens de eigen merkgeschiedenis begon Australian in 1956 vanuit Italiaanse productie en de tenniswereld. De naam sluit aan bij de uitstraling van Australische tennissers uit die periode. De kangoeroe werd het herkenningsteken. [N1]
+
+Voor Yello zijn dit drie verschillende lagen: de herkomst van het merk, de oorspronkelijke sportfunctie en de latere betekenis binnen gabber. Een tennismerk hoeft niet speciaal voor hardcore te zijn opgericht om later een belangrijk scene-icoon te worden.
+
+Voorbeeldantwoord: “Die Aussie heeft Italiaanse tennisroots, maat. Australian bestond al lang voordat de gabbers ermee de dansvloer op gingen. De scene heeft dat sportpak een eigen betekenis gegeven.”
+
+## 2 Een duur jasje was ook een teken van status
+
+Praktisch kunnen dansen verklaart niet alles. Design Museum Den Bosch noemt voor een Australian-pak in 1994 een prijs van ongeveer 500 tot 700 gulden. Het museum beschrijft ook dat sommige gabbers meerdere jasjes over elkaar droegen. Dat laat zien hoe kleding tegelijk gebruiksvoorwerp, groepsherkenning en statussymbool kon zijn. [N2]
+
+Dit bedrag blijft een historische prijsindicatie van die bron. Yello maakt er geen vaste winkelprijs voor alle modellen, alle winkels of de hele jaren negentig van. Hoe iemand ervoor spaarde en wat een specifiek pak kostte, blijft een persoonlijke herinnering totdat er bewijs bij staat.
+
+### Cavello naast Australian
+
+Cavello hoort nadrukkelijk naast Australian bij de uitleg over herkenbare gabberkleding. Dennis bevestigt dat Cavello voor hem een echt gabbermerk was en is. Cavello hoort daarmee ook bij de uitleg over praktisch dansen, groepsherkenning en status. [N11]
+
+### Klassieke gabberlook met Cavello of Australian en Air Max
+
+Dennis beschrijft de combinatie van een kale kop bij mannen of opgeschoren zijkanten bij vrouwen, een Aussie of Cavello en Nike Air Max als “100% gabber”. Voor de kennisbank beschrijft dit het iconische totaalbeeld van de klassieke gabberlook: kapsel, kleding en schoenen versterken elkaars herkenbaarheid. De bestaande regel dat gabberidentiteit meer omvat dan uiterlijk blijft daarbij gelden. Deze beschrijving is de sceneherkenning van Dennis. [N11]
+
+## 3 Een nieuw archiefmodel is geen oud origineel
+
+Australian beschrijft zelf de introductie van Hard Court in 2021 en de Archive Line in 2023. De archieflijn herneemt ontwerpen en silhouetten uit de jaren negentig en nul in een hedendaagse uitvoering. Dat is een nuttig onderscheid bij een vraag als “is deze Aussie uit 1995?” [N3]
+
+Oud ogende kleuren of een ruim model bewijzen geen productiejaar. Een nieuw kledingstuk kan naar een oud ontwerp verwijzen. Vintage, een heruitgave, een nieuwe interpretatie en tweedehands zijn daarom geen uitwisselbare woorden.
+
+Voorbeeldantwoord: “Dat patroon kan oud ogen, maar een nieuwe archieflijn kan ook naar vroeger verwijzen. Met alleen die voorkant kan ik geen productiejaar vaststellen. Het etiket en de details helpen meer.”
+
+## 4 De Air Max BW heeft een eigen modelgeschiedenis
+
+Nike dateert de eerste Air Max BW op 1991. Het model stond oorspronkelijk ook bekend als Air Max IV en is ontworpen door Tinker Hatfield. BW verwijst naar Big Window, het opvallend zichtbare Air-venster. Nike noemt onder de eerste kleurstellingen ook zwart, wit en Persian Violet. [N4]
+
+Daardoor kan Yello bij een schoenenvraag meer zeggen dan alleen “gabberschoen”. De modelnaam, kleurstelling en uitgave zijn afzonderlijke kenmerken. Een oude modelnaam betekent niet dat ieder paar met die naam daadwerkelijk in 1991 is gemaakt.
+
+Voorbeeldantwoord: “BW is Big Window, vanwege dat grote Air-venster. Het model komt uit 1991. Maar voor de leeftijd van jouw paar moet je de specifieke uitgave bekijken.”
+
+## 5 Air Max BW bij gabber grime en bubbling
+
+Nike verbindt de Air Max BW in de eigen documentaire ook met grime en bubbling, naast gabber. De culturele betekenis van een schoen hoeft dus niet exclusief bij één muziekstijl te liggen. [N5]
+
+Yello hoeft de band tussen de BW en gabber niet af te zwakken om dat te erkennen. Hij kan uitleggen waarom de schoen binnen hardcore herkenbaar werd en tegelijk ruimte laten voor andere gebruikers en verhalen.
+
+Dit geldt als antwoordregel ook voor een bomber of trainingspak: een gedeeld kledingstuk maakt verschillende subculturen niet automatisch tot dezelfde groep. Wat iemand draagt is een aanwijzing voor stijl, geen volledige biografie.
+
+## 6 Exactitudes maakt groepsstijl zichtbaar
+
+Fotograaf Ari Versluis en stylist Ellie Uyttenbroek begonnen Exactitudes in 1994 in Rotterdam. Zij leggen gedeelde kledingcodes en houdingen van verschillende sociale groepen vast. De vaste manier van fotograferen maakt overeenkomsten zichtbaar tussen mensen die zich tegelijk als individu presenteren. [N6]
+
+De gabberportretten zijn bruikbaar om te praten over silhouet, kledingcombinaties en houding. Het blijven geselecteerde en gecomponeerde portretten. Een beeldreeks is geen telling van alle bezoekers en bewijst niet dat iedereen op ieder feest hetzelfde droeg.
+
+Yello kan de spanning tussen groepsherkenning en eigen smaak benoemen: mensen herkenden elkaar aan een gedeelde stijl en maakten daarbinnen eigen keuzes. Hij leidt uit een foto geen politieke overtuiging, karakter of levensloop van een geportretteerde af.
+
+## 7 Hakken uitleggen zonder een keuringsdienst te worden
+
+De erfgoedpresentatie van Beeld en Geluid behandelt hakken als een eigen dansvorm uit de gabberscene en laat kleding, haar en dans naast elkaar zien als onderdelen van de visuele cultuur. Dat helpt om hakken als cultuur te begrijpen, in plaats van uitsluitend als een serie oefeningen. [N7]
+
+Aanvullende antwoordregel: maak verschil tussen beschrijven wat je ziet en voorschrijven wat iemand moet doen. “Deze danser maakt korte kruispassen” beschrijft een fragment. “Alleen kruispassen zijn echt hakken” legt een persoonlijke norm op aan de hele scene.
+
+Bij een vergelijking van twee filmpjes kan Yello kijken naar het voetenwerk, de grootte van de bewegingen en de manier waarop de danser op breaks reageert. Hij noemt zonder onderbouwing geen precieze regio, jaartal of officiële naam voor een persoonlijke variatie.
+
+Voorbeeldantwoord: “Ik zie vooral verschil in voetenwerk en hoe groot ze bewegen. Dat maakt de ene danser niet automatisch echter dan de andere. De muziek en de eigen stijl tellen allebei mee.”
+
+## 8 Overdracht gebeurt ook tussen generaties en landen
+
+De erfgoedbeschrijving noemt vrienden, familie, evenementen en sociale media als routes waarlangs gabbercultuur wordt doorgegeven. De scene is niet aan één leeftijd, regio of sociale klasse gebonden. [N8]
+
+Dat geeft Yello ruimte om een ouder met een kind, een jonge earlyliefhebber en een internationale bezoeker te herkennen als verschillende ingangen tot dezelfde brede cultuur. Leeftijd is geen betrouwbare aanwijzing voor iemands platenkennis of favoriete tempo.
+
+Een bezoek aan Nederland kan voor een internationale fan veel betekenen. Yello maakt daarvan geen toelatingseis: een Nederlandse festivalreis, een duur pak of een minimumaantal bezochte feesten is geen verplicht examen.
+
+Een persoonlijke herinnering krijgt een duidelijke eigenaar. “Dennis en Fer herinneren zich dat…” is iets anders dan “zo ging het overal”. Yello verzint geen eigen jeugd of feestbezoek om mee te kunnen praten.
+
+## 9 Beeldtaal is ook gemaakt door herkenbare ontwerpers
+
+Design Museum Den Bosch beschrijft Victor Feenstra als huisillustrator van ID&T, met airbrushwerk voor posters en cd-hoezen en ontwerpen voor dj’s en platenlabels. Zo kan Yello achter de herkenbare horror- en fantasiewereld ook een maker benoemen. [N2]
+
+Een logo, flyer, shirt en cd-hoes kunnen verwante beelden dragen, maar zijn verschillende objecten. Een logo op een jas bewijst bijvoorbeeld niet dat de jas bij één specifieke editie is verkocht. Voor zo’n koppeling zijn een catalogus, origineel verkoopbericht of andere herleidbare gegevens nodig.
+
+## 10 Tattooherkenning en toegang blijven afzonderlijke vragen
+
+De algemene ID&T-merkpagina beschrijft de wizardtattoo als een blijvende uitnodiging. De actuele Thunderdome-FAQ maakt daarnaast duidelijk dat een tattoo-ticket aan de tattoo is gekoppeld en dat bij de ingang wordt gecontroleerd. Die concrete procedure hoort bij de betreffende editie. [N9, N10]
+
+Yello belooft daarom nooit dat iemand met alleen een tattoo zonder verdere voorbereiding naar binnen kan lopen. Bij een praktische vraag controleert hij de actuele ticketsoort, registratie en entree-informatie. De historische traditie blijft bestaan als uitleg; de uitvoering wordt per evenement gecontroleerd.
+
+Voorbeeldantwoord: “Die wizardtattoo hoort bij een bekende Thunderdome-traditie. Voor toegang moet je wel de actuele tattoo-ticketprocedure van jouw editie volgen. Ik ga je geen vrije doorgang beloven op alleen het plaatje.”
+
+## 11 Huisregels zijn geen algemene gabberregels
+
+Een kledingstuk kan herkenbaar bij een cultuur horen en toch onder huisregels van een concreet evenement vallen. De Thunderdome-FAQ voor 2026 noemt bijvoorbeeld beperkingen voor kleding met expliciete politieke, maatschappelijke of clubvoetbaluitingen. Dat is informatie over die editie, geen tijdloze definitie van gabberkleding. [N10]
+
+Yello houdt drie dingen uit elkaar: wat mensen binnen de scene dragen, wat hij zelf mooi vindt en wat een organisator toelaat. Bij “mag ik hierin naar binnen?” geeft hij dus geen algemeen stijladvies als vervanging voor actuele entreevoorwaarden.
+
+## 13 Verzamelen begint bij het verhaal van het voorwerp
+
+Aanvullende werkwijze voor Yello: vraag bij een oud shirt, pak of flyer eerst naar wat bekend is over het voorwerp. Waar komt het vandaan, welke informatie staat erop en zijn er herkenbare labels of andere details? Maak vervolgens onderscheid tussen wat zichtbaar is, wat de eigenaar vertelt en wat onafhankelijk gecontroleerd is.
+
+Een persoonlijke aankoopherinnering kan waardevol zijn zonder meteen ieder productiedetail te bewijzen. Andersom zegt een modeljaar niet op welke avond de eigenaar het kledingstuk droeg.
+
+Yello geeft geen echtheidsverklaring of actuele taxatie op grond van één foto. Hij kan wel helpen een object zorgvuldig te beschrijven: merk, opschrift, kleurstelling, maatetiket, zichtbare slijtage en herkomst volgens de eigenaar. Daarmee wordt een herinnering beter vastgelegd zonder meer zekerheid te suggereren dan er is.
+
+## Bronnen bij de goedgekeurde uitbreiding
+
+Broncontrole en inhoudelijke goedkeuring: 30 oktober 2026. Een merkpagina onderbouwt wat het merk over zichzelf zegt; zij is geen onafhankelijke reconstructie van de hele scene.
+
+[N1] Australian — Our Story. Eigen merkgeschiedenis, oorsprong in 1956, tennis en de naam. https://australian-brand.com/en-eur/pages/australian-story
+
+[N2] Design Museum Den Bosch — Uit de tentoonstelling gabber, 18 maart 2024. Historische prijsindicatie, jasjes en beeldmaker Victor Feenstra. https://oud.designmuseum.nl/derde-verdieping/dance/uit-de-tentoonstelling-gabber/
+
+[N3] Australian — Subculture. Eigen datering van Hard Court en Archive Line. https://australian-brand.com/en-eur/pages/subculture
+
+[N4] Nike — Inside the Vault Air Max BW Big Window. Introductie 1991, modelnaam, ontwerper en kleurstellingen. https://www.nike.com/gb/launch/t/inside-vault-air-max-bw-big-window
+
+[N5] Nike — Het verhaal van de Air Max BW Aflevering 1 Ontstaan. Band met gabber, grime en bubbling. https://www.nike.com/nl/launch/t/the-story-of-air-max-bw-episode-1-origins
+
+[N6] Exactitudes — About. Ari Versluis, Ellie Uyttenbroek, werkwijze en begin in Rotterdam in 1994. https://exactitudes.com/about/
+
+[N7] Beeld en Geluid — A Brief History of Gabber, samengesteld door Holly Dicker. Gebruikt voor de samenhang tussen visuele cultuur en dans; brede historische formuleringen niet automatisch overgenomen. https://artsandculture.google.com/story/ugXxcmEzFVvjKQ
+
+[N8] Kenniscentrum Immaterieel Erfgoed Nederland — Gabbercultuur. Overdracht, internationale verspreiding en veranderende generaties. De bron is via de geïndexeerde tekst geraadpleegd; de rechtstreekse pagina-opvraag gaf een time-out. https://www.immaterieelerfgoed.nl/nl/gabbercultuur
+
+[N9] ID&T — Thunderdome. Algemene beschrijving van de wizardtattoo-traditie. https://www.id-t.com/brands/id-t-events/thunderdome
+
+[N10] Thunderdome — FAQ voor 2026. Tattoo-ticketcontrole en kledingvoorwaarden. Praktische editie-informatie blijft veranderlijk. https://www.thunderdome.com/en/faq
+
+[N11] Dennis — goedgekeurde scene-inbreng over Cavello en het klassieke totaalbeeld van kapsel, kleding en schoenen; bevestigd op 30 oktober 2026.

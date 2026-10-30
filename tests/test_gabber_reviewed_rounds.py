@@ -79,6 +79,61 @@ class ReviewedRoundThreeRetrievalTests(unittest.TestCase):
                 self.assertNotIn("via de MHJH-familie weer bij evenementen fotografeert", selected)
 
 
+class ReviewedRoundFourRetrievalTests(unittest.TestCase):
+    def test_reviewed_clothing_and_culture_answers_are_retrievable(self):
+        checks = (
+            ("Waar komt Australian vandaan en wanneer begon het merk?", "1956"),
+            ("Is de Australian Archive Line uit 2023 een oud origineel?", "hedendaagse"),
+            ("Wanneer kwam de Nike Air Max BW uit?", "1991"),
+            ("Wat betekent BW bij Nike Air Max?", "Big Window"),
+            ("Wie begonnen Exactitudes?", "Ari Versluis"),
+            ("Cavello als gabbermerk naast Australian", "Dennis"),
+            ("Klassieke gabberlook met Cavello en Air Max", "100% gabber"),
+            ("De Air Max BW bij grime en bubbling", "bubbling"),
+            ("Thunderdome tattoo toegang procedure", "tattoo-ticket"),
+            ("Hakken persoonlijke dansstijl", "choreografie"),
+            ("Gabbercultuur overdracht generaties", "familie"),
+            ("Oude kleding verzamelen herkomst", "eigenaar"),
+        )
+        for question, expected in checks:
+            with self.subTest(question=question):
+                excerpts = _hardcore_matches(question)
+                selected = "\n\n".join(excerpts)
+                self.assertIn(expected.casefold(), selected.casefold())
+                self.assertLessEqual(len(excerpts), 3)
+                self.assertLessEqual(len(selected), 7200)
+                self.assertNotIn("YES! top!", selected)
+                self.assertNotIn("review-feedback", selected)
+                self.assertNotIn("Welke nieuwe passage", selected)
+
+    def test_locker_answers_do_not_restore_an_undated_fixed_price(self):
+        from core.mhjh_context import get_relevant_mhjh_context
+        for question in (
+            "Wat kosten lockers bij Whitehouse?",
+            "Whitehouse praktische partyinfo lockers",
+            "Welke prijs geldt voor een kluis?",
+        ):
+            with self.subTest(question=question):
+                selected = get_relevant_mhjh_context(question) or ""
+                self.assertIn("concrete editie", selected)
+                self.assertNotIn("€6", selected)
+                self.assertNotIn("€ 6", selected)
+
+    def test_runtime_knowledge_excludes_review_and_unbuilt_workshop_promises(self):
+        from core.mhjh_context import HARDCORE_DIR
+        path = HARDCORE_DIR / "Gabber_Yello_Hardcorekennis_Ronde_4_Kleding_Dansstijl_Gebruiken.md"
+        text = path.read_text(encoding="utf-8")
+        for unwanted in (
+            "concept ter controle", "Controlelijst voor Dennis",
+            "Controlepunten voor Dennis en Fer", "review-feedback",
+            "YES! top!", "opgeschroren", "hakkenworkshop",
+            "Deze aanvulling bevestigt die prijs niet opnieuw",
+        ):
+            self.assertNotIn(unwanted, text)
+        self.assertIn("goedgekeurd door Dennis", text)
+        self.assertIn("sceneherkenning van Dennis", text)
+
+
 if __name__ == "__main__":
     unittest.main()
 

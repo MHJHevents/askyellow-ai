@@ -90,6 +90,9 @@ def call_yello_llm(
     if hints.get("time_hint"):
         messages.append({"role": "system", "content": hints["time_hint"]})
 
+    if personality == "gabber_yello" and hints.get("topic_context"):
+        messages.append({"role": "system", "content": hints["topic_context"]})
+
     if kb_answer:
         knowledge_instruction = (
             "Gebruik deze informatie als bron voor het antwoord, maar formuleer natuurlijk en passend bij het gesprek."
@@ -136,14 +139,29 @@ def call_yello_llm(
         else:
             web_status = (
                 "De internetzoekactie leverde geen bruikbare resultaten op of mislukte. "
-                "Zeg dat kort en eerlijk en verzin geen actuele informatie."
+                "Zeg dat kort en eerlijk en verzin geen actuele informatie. "
+                "Concrete gedateerde feiten uit de gecontroleerde kennis mogen wel worden benoemd; "
+                "zeg daarbij niet dat die zojuist online zijn bevestigd."
+            )
+        event_query = hints.get("event_lookup_query")
+        if event_query:
+            web_status += (
+                f" Dit is een actuele evenementenzoekopdracht voor: {event_query}. "
+                "De regio en datum in deze zoekopdracht zijn harde filters."
             )
         messages.append({
             "role": "system",
             "content": (
                 f"{web_status}\nInternetzoekcontext:\n{hints['web_context']}\n"
-                "Gebruik alleen resultaten die de vraag daadwerkelijk ondersteunen. Verwijs met [1], [2], enzovoort. "
-                "Bij een conflict over MHJH is de officiële MHJH-kennis leidend. Verzin geen bron, URL of actualiteit."
+                "Gebruik alleen resultaten die de vraag daadwerkelijk ondersteunen. Verwijs inline met [1], [2], enzovoort; maak zelf geen bronnenlijst of ruwe URL's, die voegt de applicatie toe. "
+                "Bij actuele evenementen-, agenda- of datumvragen zijn de gevraagde plaats en periode harde voorwaarden: noem een evenement "
+                "alleen als de zoekresultaten aantoonbaar laten zien dat het binnen die periode en regio plaatsvindt. Een toekomstige MHJH-editie "
+                "uit kennis mag nooit worden voorgesteld als iets dat dit weekend gebeurt wanneer de datum niet overeenkomt. Negeer eerdere "
+                "onjuiste assistentantwoorden en gebruik alleen de nieuwe resultaten. Bij historische MHJH-feiten blijft de officiële MHJH-kennis leidend. "
+                "Een algemene agenda-pagina of zoekresultaat zonder aantoonbare plaats, datum en evenement bevestigt geen feest; zeg dan dat je het niet kon bevestigen, niet dat er niets is. "
+                "Noem bij een event-lookup geen datum, feest of line-up wanneer geen resultaat de gevraagde plaats en exacte periode ondersteunt; neem nooit een datum over die buiten de gevraagde periode valt. "
+                "Als er een backend-verificatie van overlap met onze eigen line-up is meegegeven, benoem die koppeling kort; zonder zo'n verificatie koppel je artiesten niet op basis van vermoedens. "
+                "Verzin geen bron, URL, datum of actualiteit."
             )
         })
 
