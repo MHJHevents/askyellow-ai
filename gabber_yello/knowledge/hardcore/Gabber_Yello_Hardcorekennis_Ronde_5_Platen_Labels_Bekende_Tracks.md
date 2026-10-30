@@ -2,7 +2,7 @@
 
 ## Platen, labels en bekende tracks
 
-**Status:** concept ter controle door Dennis  
+**Status:** goedgekeurd door Dennis voor staging op 30 oktober 2026  
 **Doel:** belangrijke labels en platen herkennen, credits correct uitleggen en geen titels, makers of versies verzinnen  
 **Aansluiting:** ronde 1 behandelt muziekstijlen; ronde 2 artiesten; ronde 3 scenehistorie; ronde 4 kleding, dans en gebruiken.
 
@@ -50,13 +50,23 @@ Een langere verzameling muziek die als één artiestenproject wordt uitgebracht.
 
 Een verzameling tracks van verschillende artiesten, bijvoorbeeld een Thunderdome- of Masters of Hardcore-cd.
 
-### Testpressing of white label
+### Testpersing
 
-Een vroege of beperkte vinylpersing, vaak zonder volledige bedrukte hoes of labelinformatie. Niet iedere witte plaat is automatisch zeldzaam of officieel.
+Een testpersing dient doorgaans om de geluidskwaliteit van een persing te controleren. Een kaal label maakt een plaat zonder aanvullende herkomstgegevens nog geen aantoonbare testpersing. [N1](https://support.discogs.com/hc/en-us/articles/360005006654-Database-Guidelines-6-Format)
+
+### White label
+
+White label beschrijft volgens de Discogs-formatrichtlijn een plaat waarvan de middenlabels niet mechanisch zijn bedrukt; de kleur hoeft niet letterlijk wit te zijn. Dit zegt op zichzelf niet dat het een testpersing, zeldzame of officiële plaat is. [N1](https://support.discogs.com/hc/en-us/articles/360005006654-Database-Guidelines-6-Format)
+
+### Promo
+
+Promo verwijst naar het promotiedoel van een uitgave. Een testpersing, white label en promo kunnen kenmerken delen, maar betekenen verschillende dingen. Kijk naar de markering en herkomst van de concrete uitgave. [N1](https://support.discogs.com/hc/en-us/articles/360005006654-Database-Guidelines-6-Format)
 
 ### Catalogusnummer
 
-De unieke code waarmee een label een release in zijn catalogus identificeert. Verzamelaars gebruiken catalogusnummers om verschillende persingen en versies uit elkaar te houden.
+Een code waarmee een label een uitgave in zijn catalogus aanduidt. Een catalogusnummer identificeert niet op zichzelf iedere persing uniek. Eén uitgave kan meerdere catalogusnummers hebben; een labelnummer is bovendien iets anders dan een distributiecode. Bekijk label, nummer, formaat en overige persingsgegevens samen. [N2](https://support.discogs.com/hc/en-us/articles/360005006614-Database-Guidelines-4-Label-Catalog-Number)
+
+Een matrixnummer kan in de uitloopgroef van vinyl of de binnenring van een cd staan en hoort bij de productie-identificatie. Die code is niet automatisch hetzelfde als het voornaamste catalogusnummer op de hoes. Neem zichtbare codes nauwkeurig over; vul ontbrekende letters of cijfers niet op basis van een vergelijkbare release in. Bij een onduidelijke foto blijft een deel van de identificatie open. [N2](https://support.discogs.com/hc/en-us/articles/360005006614-Database-Guidelines-4-Label-Catalog-Number)
 
 ---
 
@@ -619,24 +629,137 @@ Voor actuele releases van MHJH-artiesten gebruikt Gabber Yello de officiële art
 
 ---
 
-## 23. Controlelijst voor Dennis
 
-Graag extra kritisch kijken naar:
-
-- Welke labels zijn voor Den Haag en jullie generatie onmisbaar maar ontbreken?
-- Klopt de rol van Mid-Town, Rotterdam Records, Forze en Terror Traxx?
-- Welke platen waren werkelijk vloerbepalend en welke heb ik vooral uit compilatielijsten gehaald?
-- Welke vroege tracks móét iedere gabber kennen?
-- Welke 3 Steps Ahead-, Dreamteam-, Gizmo-, Darkraver- en Viperplaten ontbreken?
-- Welke millenniumtracks zijn groter in de echte scene dan online lijstjes suggereren?
-- Welke commerciële happy-hardcoretracks horen wel of juist niet in deze basis?
-- Welke frenchcore-, terror- en uptempoplaten zijn blijvende klassiekers geworden?
-- Welke labels stonden voor een heel specifieke sound die beter moet worden uitgelegd?
-- Welke populaire tracks worden vaak aan de verkeerde artiest of versie toegeschreven?
-- Welke sampleverhalen kent iedereen uit de scene?
-- Welke platen hebben voor jou persoonlijk een verhaal dat duidelijk als persoonlijke ervaring mag worden opgenomen?
 
 ---
+
+## Reissue en repress bij vinylheruitgaven
+
+Discogs gebruikt reissue voor een nieuwe uitgave van eerder verschenen werk. Voor de specifiekere term repress hoort de persing uit de oorspronkelijke masterdisc voort te komen. De termen kunnen samen voorkomen. In gesprekken blijft de onderbouwing van de betreffende uitgave belangrijk. [N1](https://support.discogs.com/hc/en-us/articles/360005006654-Database-Guidelines-6-Format)
+
+Yello houdt daarom de muziekgeschiedenis en de geschiedenis van een exemplaar apart. Een nieuwe persing van een bekende oude track maakt dat exemplaar niet automatisch tot een originele jaren-negentigplaat.
+
+---
+
+## Label, platenmaatschappij, distributeur, perser en productiecredits
+
+Een label, platenmaatschappij, distributeur en perser kunnen ieder op dezelfde uitgave vermeld staan. Discogs behandelt ze als verschillende rollen. Een zichtbare bedrijfsnaam maakt die partij dus niet vanzelf tot het muzikale label of de producer. [N2](https://support.discogs.com/hc/en-us/articles/360005006614-Database-Guidelines-4-Label-Catalog-Number)
+
+Ook persoonscredits worden per rol en per concrete uitgave gelezen. De Discogs-creditrichtlijn waarschuwt ervoor credits tussen verschillende uitgaven over te nemen zonder te controleren of ze daar werkelijk bij horen. [N3](https://support.discogs.com/hc/en-us/articles/360005006834-Database-Guidelines-10-Credits)
+
+Yello kan kort antwoorden: “Die naam staat erbij, maar ik moet eerst kijken welke rol erbij vermeld is.” Dat is nauwkeuriger dan alle namen uit een boekje samen als de makers van iedere track op te sommen.
+
+---
+
+## Mokum Records: Freddy B, Boudisque en Roadrunner
+
+De eigen Mokum-geschiedenis noemt 1992 als oprichtingsjaar en Fred Berkhout, Freddy B, als oprichter. Het label begon onder de vleugels van Boudisque en kwam later bij Roadrunner terecht.  [N4](https://mokumrecords.nl/freddy-b/)
+
+Dezelfde bron verbindt de internationale hitdoorbraak in 1995 met Technohead en noemt de compilatiereeks Fucking Hardcore. Daarmee laat de eigen labelgeschiedenis verschillende kanten zien: een labelidentiteit, een bedrijfsomgeving, losse releases en compilaties.
+
+Yello gebruikt deze terugblik voor historische context. Hij leidt uit een oude bedrijfsrelatie niet af wie vandaag eigenaar is, wie een artiest nu vertegenwoordigt of welke rechten bij een nieuwe uitgave horen.
+
+---
+
+## DJ Chosen Few — Name Of The DJ, MOK265 en remasterversies
+
+De officiële Mokum-pagina MOK265 biedt een bruikbaar voorbeeld bij de bestaande uitleg over remix en remaster. De uitgave heet Mokum Classixxx — Name Of The DJ en staat gedateerd op 14 juli 2022. Er staan onder meer een Extended Mixxx Remastered en een Cyanide Remixxx Remastered op. [N5](https://mokumrecords.bandcamp.com/album/mok265-dj-chosen-few-mokum-classixxx-name-of-the-dj)
+
+De credits noemen François Prijt als schrijver en producer, Rodney Pilapil bij track 2 en Stephan Scheltema als remixer van track 3. De tracklijst schrijft track 2 uit als DJ Chosen Few vs DJ Pila — The Break. [N5](https://mokumrecords.bandcamp.com/album/mok265-dj-chosen-few-mokum-classixxx-name-of-the-dj)
+
+Dit voorbeeld geeft Yello een gecontroleerde koppeling tussen een versienaam en een specifieke uitgave. De datum van MOK265 mag niet worden gebruikt als bewijs dat de muziek pas in 2022 ontstond. Voor de eerste oorspronkelijke persing is afzonderlijke controle nodig.
+
+---
+
+## DJ T-go — Let It Roar, MOK324 en Technohead Remix
+
+Mokum publiceert Let It Roar ! van DJ T-go onder nummer MOK324, met als datum 1 mei 2025. De uitgave telt vijf tracks, waaronder Let It Roar ! en Let It Roar ! (Technohead Remix). Het label presenteert de EP als early hardcore. [N6](https://mokumrecords.bandcamp.com/album/mok324-dj-t-go-let-it-roar)
+
+De credits noemen Tygo Ouwerkerk voor schrijven en produceren, Formek voor mastering en Wicked XXX voor het artwork. Dit is een concreet voorbeeld waarin de rollen achter een release afzonderlijk zichtbaar zijn. Technohead staat bij de remixversie; daarmee wordt Technohead niet automatisch de oorspronkelijke artiest van het hele project. [N6](https://mokumrecords.bandcamp.com/album/mok324-dj-t-go-let-it-roar)
+
+Yello mag deze gecontroleerde release benoemen zonder te doen alsof hij alle boekingen, persoonlijke banden of overige producties van DJ T-go kent. Een geverifieerde catalogusvermelding onderbouwt deze uitgave.
+
+---
+
+## Industrial Strength — Call The Man en Extreme Terror remixversies
+
+De officiële uitgave 30 Years of Industrial Strength bevat onder meer Satronica, Lenny Dee — Call The Man (Buzz Fuzz Remix) en DJ Skinhead — Extreme Terror (Kenny Campbell’s Terror of Techno Remix). De namen maken zichtbaar hoe een labelcatalogus ook via nieuwe bewerkingen voortleeft. [N7](https://industrialstrengthrecords.bandcamp.com/album/30-years-of-industrial-strength)
+
+De titel van zo’n jubileumuitgave is geen bewijs dat alle opgenomen versies op hetzelfde moment zijn ontstaan of op dezelfde oorspronkelijke plaat stonden. Yello benoemt bij een concrete vraag de versie die op de geraadpleegde tracklijst staat.
+
+Voorbeeldantwoord: “Op die Industrial Strength-uitgave staat de Buzz Fuzz-remix van Call The Man, gecrediteerd aan Satronica en Lenny Dee. Als jij een andere mix bedoelt, moeten we die apart bekijken.”
+
+---
+
+## Kom Tie Dan Hè! — Top 40, acht weken en Digidance
+
+De Nederlandse Top 40 vermeldt bij Kom Tie Dan Hè! van DJ Norman vs Darkraver: 2005, een piekpositie van 4 en acht weken in de lijst. De songinformatie vermeldt Digidance als platenlabel. [N8](https://www.top40.nl/dj-norman-vs-darkraver/dj-norman-vs-darkraver-kom-tie-dan-he-9352)
+
+Het zegt iets over de vermelde hitlijst en uitgave. Het bewijst geen precieze verkoopoplage, geen positie in een andere hitlijst en geen objectieve rangorde van hardcoreklassiekers.
+
+Yello kan zeggen: “Landelijk was dat een flinke hit: nummer 4 in de Nederlandse Top 40.” Welke plaat voor een vriendengroep dé avond bepaalde, blijft een andere soort betekenis.
+
+---
+
+## De Haag Hakke!!, Den Haag Hakkûh en MHJH-feestnamen onderscheiden
+
+Antwoordregel bij Haagse voorbeelden: lees een titel samen met artiest, versie en periode. De Haag Hakke!! van Éch Heftag!, Den Haag Hakkûh uit de moderne samenwerking en de gelijknamige MHJH-feestidentiteit blijven afzonderlijke verwijzingen.
+
+Een gebruiker kan met “die Haagse plaat” een specifieke opname bedoelen, terwijl een ander naar de feestnaam verwijst. Yello gebruikt de gesprekssituatie om te begrijpen waarnaar wordt gevraagd. Daarna benoemt hij alleen de credits die bij die verwijzing bevestigd zijn.
+
+Voorbeeldantwoord: “Bedoel je De Haag Hakke!! van Éch Heftag!, of Den Haag Hakkûh van Hans Glock, The Darkraver en DJ Gizmo?” Eén gerichte vraag is hier nuttiger dan de twee verhalen samenvoegen.
+
+---
+
+## Kenniskaarten voor platen en releaseversies
+
+Een inhoudelijke trackkaart bewaart: artiest zoals vermeld, titel, versienaam, concrete uitgave, label en catalogusnummer voor zover bekend, bron en controledatum. Voeg de betekenis voor de scene apart toe, zodat een waardering niet ongemerkt een releasecredit wordt.
+
+Voor Name Of The DJ kan een kaart over MOK265 bijvoorbeeld de gecontroleerde remasterversies bevatten. Een tweede kaart over een oorspronkelijke vinyluitgave krijgt pas een jaartal en nummer wanneer die specifieke uitgave is gecontroleerd. Zo hoeft Yello bij een gerichte vraag niet een halve discografie mee te vertellen.
+
+Bij ontbrekende informatie wordt het veld niet met een vermoeden gevuld. Dat helpt ook bij vragen over een demo, een onbekende B-kant of een opname waarvan alleen een stukje uit een set beschikbaar is.
+
+---
+
+## Trackherkenning, mixidentificatie en MHJH-context
+
+Een bezoeker kan een track herkennen aan een stem, een break of het moment waarop een dj hem draaide. Dat is een bruikbaar aanknopingspunt voor een gesprek. Het fragment bewijst niet vanzelf welke studio-uitgave of remix is gebruikt.
+
+Yello kan de gebruiker helpen beschrijven wat wordt herkend: welk gedeelte, welke opname, een geschatte periode en eventuele zichtbare setinformatie. Daarna maakt hij onderscheid tussen een kandidaat en een bevestigde identificatie. Hij noemt niet alvast een exacte mix omdat de titel goed bij de herinnering past.
+
+Voor deze ronde blijft de eigen MHJH-context beperkt tot Komt Tie Dan He en Den Haag Hakkûh. Er worden geen persoonlijke plaatherinneringen van Dennis of Fer toegevoegd. De bestaande culturele verbinding met de MHJH-concepten blijft behouden, zonder een individuele ervaring te verzinnen.
+
+Voor een film-, stem- of muzieksample waarvan de herkomst niet vaststaat blijft controle nodig.
+
+---
+
+## Bronnen bij de goedgekeurde verdieping
+
+Geraadpleegd op 30 oktober 2026. De definities van Discogs zijn catalogiseerregels van dat platform; de concrete labelpagina’s onderbouwen de vermelde uitgaven. 
+
+[N1] Discogs — Database Guidelines 6 Format, onderdelen 6.12 en 6.17. Onderscheid testpersing, white label, promo, reissue en repress.
+https://support.discogs.com/hc/en-us/articles/360005006654-Database-Guidelines-6-Format
+
+[N2] Discogs — Database Guidelines 4 Label Catalog Number. Bedrijfsrollen, meerdere catalogusnummers en matrixinformatie.
+https://support.discogs.com/hc/en-us/articles/360005006614-Database-Guidelines-4-Label-Catalog-Number
+
+[N3] Discogs — Database Guidelines 10 Credits, waaronder 10.1 en 10.7. Rollen en de koppeling van credits aan de specifieke uitgave.
+https://support.discogs.com/hc/en-us/articles/360005006834-Database-Guidelines-10-Credits
+
+[N4] Mokum Records — Freddy B. Eigen geschiedenis van oprichting, bedrijfsomgeving, Technohead en compilaties.
+https://mokumrecords.nl/freddy-b/
+
+[N5] Mokum Records — MOK265 DJ Chosen Few Mokum Classixxx Name Of The DJ. Officiële tracklijst, datum en credits van deze uitgave.
+https://mokumrecords.bandcamp.com/album/mok265-dj-chosen-few-mokum-classixxx-name-of-the-dj
+
+[N6] Mokum Records — MOK324 DJ T-go Let It Roar. Officiële tracklijst, datum en verschillende creditrollen.
+https://mokumrecords.bandcamp.com/album/mok324-dj-t-go-let-it-roar
+
+[N7] Industrial Strength Records — 30 Years of Industrial Strength. Officiële tracklijst met de genoemde remixversies.
+https://industrialstrengthrecords.bandcamp.com/album/30-years-of-industrial-strength
+
+[N8] Nederlandse Top 40 — Kom Tie Dan Hè van DJ Norman vs Darkraver. Jaar, piekpositie, aantal weken en vermeld label.
+https://www.top40.nl/dj-norman-vs-darkraver/dj-norman-vs-darkraver-kom-tie-dan-he-9352
 
 ## Bronnen en verificatieroute
 

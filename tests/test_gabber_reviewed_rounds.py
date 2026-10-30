@@ -134,6 +134,61 @@ class ReviewedRoundFourRetrievalTests(unittest.TestCase):
         self.assertIn("sceneherkenning van Dennis", text)
 
 
+class ReviewedRoundFiveRetrievalTests(unittest.TestCase):
+    def test_reviewed_release_facts_and_definitions_are_retrievable(self):
+        checks = (
+            ("Wat is een testpersing?", "geluidskwaliteit"),
+            ("Is een white label automatisch een testpersing?", "niet mechanisch"),
+            ("Wat betekent promo bij een plaat?", "promotiedoel"),
+            ("Identificeert een catalogusnummer iedere persing uniek?", "niet op zichzelf"),
+            ("Waar staat het matrixnummer op vinyl?", "uitloopgroef"),
+            ("Wat is het verschil tussen reissue en repress?", "oorspronkelijke masterdisc"),
+            ("Zijn label en distributeur dezelfde rol?", "verschillende rollen"),
+            ("Wie begon Mokum Records bij Boudisque?", "Fred Berkhout"),
+            ("Mokum Records en Roadrunner", "1992"),
+            ("Name Of The DJ MOK265 versies", "Cyanide Remixxx Remastered"),
+            ("Is 14 juli 2022 de eerste persing van Name Of The DJ?", "afzonderlijke controle"),
+            ("DJ Chosen Few MOK265 credits", "François Prijt"),
+            ("Wie doet The Break op MOK265?", "DJ Pila"),
+            ("DJ T-go Let It Roar MOK324", "1 mei 2025"),
+            ("DJ T-go Let It Roar Technohead Remix credits", "Tygo Ouwerkerk"),
+            ("Wie deed mastering en artwork voor Let It Roar?", "Wicked XXX"),
+            ("Call The Man Buzz Fuzz Remix Industrial Strength", "Satronica"),
+            ("Extreme Terror Kenny Campbell remix", "DJ Skinhead"),
+            ("Kom Tie Dan Hè Top 40 hoeveel weken Digidance", "acht weken"),
+            ("Den Haag Hakkûh en De Haag Hakke verschillende platen", "1993"),
+            ("Trackherkenning mixidentificatie MHJH-context", "geen persoonlijke plaatherinneringen"),
+        )
+        for question, expected in checks:
+            with self.subTest(question=question):
+                excerpts = _hardcore_matches(question)
+                selected = "\n\n".join(excerpts)
+                self.assertIn(expected.casefold(), selected.casefold())
+                self.assertLessEqual(len(excerpts), 3)
+                self.assertLessEqual(len(selected), 7200)
+                self.assertNotIn("Controlepunten voor Dennis", selected)
+                self.assertNotIn("Fer riep gelijk", selected)
+
+    def test_runtime_replaces_conflicts_and_excludes_review(self):
+        from core.mhjh_context import HARDCORE_DIR
+        path = HARDCORE_DIR / "Gabber_Yello_Hardcorekennis_Ronde_5_Platen_Labels_Bekende_Tracks.md"
+        text = path.read_text(encoding="utf-8")
+        for unwanted in (
+            "concept ter controle", "Testpressing of white label",
+            "De unieke code waarmee", "Controlelijst voor Dennis",
+            "Controlepunten voor Dennis en Fer", "Voorgestelde",
+            "reviewfase", "Voor Dennis was dit de plaat van die avond",
+            "Fer riep gelijk", "Yes!!", "welke nieuwe passage",
+        ):
+            self.assertNotIn(unwanted, text)
+        for expected in (
+            "goedgekeurd door Dennis", "geen persoonlijke plaatherinneringen",
+            "Komt Tie Dan He", "Den Haag Hakkûh",
+            "de muziek pas in 2022 ontstond", "https://mokumrecords.bandcamp.com/album/mok265",
+        ):
+            self.assertIn(expected, text)
+
+
 if __name__ == "__main__":
     unittest.main()
 
