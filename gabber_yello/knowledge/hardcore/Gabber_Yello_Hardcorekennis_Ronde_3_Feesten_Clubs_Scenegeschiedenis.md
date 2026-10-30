@@ -2,7 +2,7 @@
 
 ## Feesten, clubs en de geschiedenis van de scene
 
-**Status:** concept ter controle door Dennis  
+**Status:** goedgekeurd door Dennis en reviewers; uitbreiding en correcties bevestigd op 29 oktober 2026  
 **Doel:** locaties, feestconcepten, organisaties en historische periodes correct uit elkaar houden  
 **Aansluiting:** ronde 1 behandelt muziek, stijlen en cultuur; ronde 2 behandelt artiesten, dj’s en liveacts.
 
@@ -347,13 +347,13 @@ MHJH Events organiseert geen nostalgisch museum, maar bouwt vanuit de geschieden
 - mainstage van 21.00 tot 05.00 uur;
 - talentstage van 22.00 tot 03.00 uur;
 - combinatie van gevestigde namen, Haagse/MHJH-artiesten en talent;
-- Outsiders verzorgt de closing set.
+- Outsiders stond aangekondigd voor de closing set.
 
 Gabber Yello gebruikt voor actuele tijden, line-ups, tickets en praktische informatie altijd de officiële MHJH-gegevens. Historische kennis mag een actuele aankondiging nooit overschrijven.
 
 ### Mirko Kuit en MHJH
 
-De voormalige Thunderdome- en ID&T-huisfotograaf **Mirko Kuit** is onderdeel van de MHJH-familie. Hij was jarenlang niet meer actief in de hardcorescene, maar is door zijn band met MHJH Events tijdens de laatste evenementen weer standaard aanwezig. Voor **Den Haag Hakkûh II** haalt hij zijn camera opnieuw uit de mottenballen.
+De voormalige Thunderdome- en ID&T-huisfotograaf **Mirko Kuit** is onderdeel van de MHJH-familie. Hij was jarenlang niet meer actief in de hardcorescene, maar is door zijn band met MHJH Events tijdens de laatste evenementen weer standaard aanwezig. Bij **Den Haag Hakkûh II** was Mirko aanwezig, maar hij heeft geen publieke foto’s gemaakt. Dit is door Dennis bevestigd op 29 oktober 2026.
 
 Dit maakt Mirko voor MHJH een levende verbinding tussen de oorspronkelijke Thunderdomegeschiedenis en de huidige Haagse/Scheveningse scene.
 
@@ -432,23 +432,6 @@ Dit maakt Mirko voor MHJH een levende verbinding tussen de oorspronkelijke Thund
 
 ---
 
-## 19. Controlelijst voor Dennis
-
-Graag extra kritisch kijken naar:
-
-- Welke legendarische clubs of zalen ontbreken volledig?
-- Hoe beschrijf jij het verschil in sfeer tussen Parkzicht, Energiehal, Sporthallen Zuid en Hemkade?
-- Welke feesten waren voor de scene belangrijker dan internetbronnen laten zien?
-- Klopt de plaats van Nightmare, Megarave, Hellraiser en Masters of Hardcore in de tijdlijn?
-- Welke Haagse locaties en feesten horen absoluut in deze geschiedenis?
-- Welke feesten waren écht hardcore en welke waren breder?
-- Wanneer voelde jij persoonlijk dat de jaren-negentighype voorbij was — en wanneer voelde de wederopstanding?
-- Welke mediabeelden over gabbers waren volgens de scene totale onzin?
-- Welke internationale locaties of concepten moet Gabber Yello kennen?
-- Welke persoonlijke sceneverhalen mogen als ervaring worden toegevoegd, duidelijk onderscheiden van algemene feiten?
-
----
-
 ## Bronnen en verificatieroute
 
 - [Gabbercultuur — Kenniscentrum Immaterieel Erfgoed Nederland](https://www.immaterieelerfgoed.nl/nl/gabbercultuur) — cultuurhistorische basis en levende erfgoedcontext.
@@ -463,3 +446,159 @@ Graag extra kritisch kijken naar:
 - [Ground Zero: The Final Night](https://ra.co/events/2093119) — laatste editie op 30 augustus 2025 in Bussloo.
 - [Turbinenhalle Oberhausen](https://turbinenhalle.de/) — actuele evenementenlocatie met terugkerende hardcoreconcepten.
 - Officiële MHJH-informatie is leidend voor de eigen evenementen.
+
+---
+
+## Mysteryland was niet altijd op dezelfde plek
+
+De geschiedenis van Mysteryland is ook een geschiedenis van verhuizingen. Een herinnering aan Mysteryland in de jaren negentig kan dus over een heel ander terrein gaan dan het festival in Haarlemmermeer. De eigen festivalgeschiedenis vermeldt de volgende vroege buitenedities. [N1]
+
+| Jaar en datum | Locatie volgens het officiële festivalarchief |
+| --- | --- |
+
+| 9 tot en met 11 juli 1993 | Midland Circuit in Lelystad |
+
+| 24 tot en met 26 juni 1994 | Maasvlakte in Rotterdam |
+
+| 22 juni 1996 | Airport Eindhoven |
+
+| 5 juli 1997 | Bussloo bij Apeldoorn |
+
+| 4 juli 1998 | Recreatieterrein Lingebos |
+
+| 3 juli 1999 | Bussloo bij Apeldoorn |
+
+| 26 augustus 2000 | Bussloo bij Apeldoorn |
+
+Dit is een selectie van buitenedities, geen volledige lijst van alle evenementen onder de naam Mysteryland. Vooral het verschil tussen Bussloo en Lingebos is nuttig: het zijn niet twee namen voor hetzelfde terrein. De bekende Mysteryland-datum 4 juli 1998 hoort in dit archief bij Lingebos. [N1]
+
+### Mysteryland meerdaags festival camping pauze 2026 en terugkeer 2027
+
+Stand op 29 oktober 2026: Mysteryland groeide uit tot een breed, meerdaags dancefestival in Haarlemmermeer met camping. De editie van 2025 liep van 22 tot en met 24 augustus; de gemeente verleende daarvoor een vergunning als weekendfestival met camping. Het bleef dus niet bij de vroege hardcore- en rave-opzet uit de jaren negentig. [N15, N16]
+
+Belangrijke tijdnuance: Mysteryland sloeg 2026 over om het concept te vernieuwen. Het is daarmee niet definitief gestopt. De officiële FAQ kondigt voor 2027 een terugkeer in Haarlemmermeer op 27, 28 en 29 augustus aan, inclusief camping waar bezoekers hun eigen tent kunnen meenemen. Yello zegt dus niet dat er in 2026 gewoon een editie was. Controleer vóór een actueel bezoekadvies opnieuw de officiële data, tickets en campingvoorwaarden. [N15, N17]
+
+### Mysteryland herinneringen en edities uit elkaar houden
+
+Gedragsregel: een bezoeker die zegt “de eerste Mysteryland, met lasers tussen de bomen” vertelt een persoonlijke herinnering. Yello mag daar warm op reageren, maar mag niet op basis van bomen, modder of regen zelf de editie vaststellen. “Mijn eerste Mysteryland” is bovendien niet hetzelfde als “de eerste editie ooit”. De historische data controleren we; de persoonlijke ervaring schrijven we niet voor iemand over.
+
+Voorbeeldantwoord: “Mysteryland heeft behoorlijk wat terreinen gehad, maat. De editie uit 1993 stond in Lelystad; Bussloo en Lingebos kwamen later. Die lasers en blubber zijn jouw herinnering — daar ga ik niet zelf een jaartal bij verzinnen.”
+
+## Dominator stond ook in Leidschendam
+
+Dominator begon niet in Eersel. Een oorspronkelijke aankondiging van Art of Dance plaatst de eerste editie op 30 juli 2005 op Het Rutbeek in Enschede. De aankondiging van 2008 noemt vervolgens Het Rutbeek en het Stadspark in Groningen als eerdere locaties en kondigt Vlietland in Leidschendam-Voorburg aan voor 26 juli 2008. [N2, N3]
+
+In het persbericht voor 2009 verhuist het festival van Vlietland naar het E3 Strand in Eersel. Het oorspronkelijke plan voor een nieuwe Vlietland-editie werd gewijzigd omdat de organisator de gestelde eindtijd onvoldoende vond voor een volwaardig festival. Dat is het standpunt uit het organisatorenbericht, geen door Yello bedachte ruzie met de gemeente. [N4]
+
+### Dominator weekendfestival met camping in 2026 en 2027
+
+Stand op 29 oktober 2026: Dominator is doorgegroeid naar een meerdaags hardcorefestival met camping, niet alleen een zaterdagfeest. De officiële informatie voor 2026 vermeldt festivaldagen op vrijdag 17 en zaterdag 18 juli en een camping van vrijdag tot zondag. Voor de camping en de campingafterparty’s is het bijbehorende weekendticket nodig; een los dagticket geeft niet automatisch campingtoegang. De officiële weekendpagina kondigt voor 2027 de festivaldagen 16 en 17 juli aan. Houd die aankondiging apart van de historische verhuizingen en controleer praktische voorwaarden per editie opnieuw. [N18, N19]
+
+### Dominator Vlietland in de Haagse regio
+
+Haagse regiohaak: Vlietland bij Leidschendam is dus daadwerkelijk onderdeel van de Dominatorgeschiedenis. Het evenement is daarmee niet alleen een verhaal van Enschede, Groningen en Noord-Brabant.
+
+Bronvalkuil: het bericht op de Masters of Hardcore-site heeft in de paginatitel “Dominator 2010”, terwijl de tekst en evenementgegevens expliciet 25 juli 2009 vermelden. De complete aankondiging lezen is belangrijker dan blind een zoekresultaattitel overnemen. [N4]
+
+Voorbeeldantwoord: “Jazeker, Dominator stond in 2008 op Vlietland bij Leidschendam. Het festival begon in 2005 op Het Rutbeek en kwam later in Eersel terecht. Niet iedere oude Dominatorfoto is dus automatisch van het E3 Strand.”
+
+## Decibel groeide via Binnenmaas en Lingebos
+
+Decibel beschrijft zijn eigen ontwikkeling vanaf 2002 als een reis van Binnenmaas via Lingebos naar de Beekse Bergen. Het evenement groeide van een eendaags buitenfeest naar een meerdaags festival met camping. Die ontwikkeling verklaart waarom vroege bezoekers een heel andere Decibel kunnen beschrijven dan bezoekers uit latere jaren. [N5]
+
+Het retrospectief over vijftien jaar Decibel specificeert Binnenmaas voor 2002 tot en met 2004, Lingebos voor 2005 en de Beekse Bergen vanaf 2006. Dat retrospectief vermeldt ook dat de eerste editie ’s nachts plaatsvond. [N6]
+
+Niet invullen: deze bronnen bevestigen geen persoonlijke herinnering aan regen ín een tent, de hoeveelheid modder, een uitgevallen installatie of wie op dat moment draaide. Zulke details blijven een ervaring van de verteller zolang er geen concrete registratie naast ligt.
+
+Voorbeeldantwoord: “De vroege Decibel was echt een andere opzet dan dat meerdaagse festival van later. Het begon bij Binnenmaas en verhuisde via Lingebos naar de Beekse Bergen. Maar dat verhaal over die lekkende tent neem ik van jou aan als jouw herinnering, niet als iets waar ik zelf bij stond.”
+
+## Ghosttown I wanneer en waar was de eerste editie
+
+Ghosttown hoort bij Dance 2 Eden en bij de Utrechtse hardcoregeschiedenis. Het officiële evenementenarchief noemt Ghosttown I op 11 september 1993 in de Vechtsebanen in Utrecht. Op die historische line-up staan onder anderen Gizmo, Buzz Fuzz, Darkraver, The Prophet, Rob, Pavo en CJ Bolland. Dat is een editiegebonden lijst, geen uitspraak dat al die artiesten bij iedere Ghosttown aanwezig waren. [N7]
+
+Dance 2 Eden organiseerde volgens zijn eigen jubileumgeschiedenis het eerste gelijknamige feest op 4 juli 1992. Naast Ghosttown noemt de organisatie concepten als Trip 2 Dreamland en The Eden Rave en locaties als de Vechtsebanen, Central Studios, de Rijnhal en de Oosterpoort. [N8]
+
+Dit verbreedt de basiskennis met Utrecht en met een netwerk buiten de drie bekendste grote steden. De Rijnhal ligt in Arnhem en de Oosterpoort in Groningen; de genoemde geschiedenis maakt ze niet tot Utrechtse zalen.
+
+Gedragsregel: Ghosttown is het concept, Dance 2 Eden de organisatie en de Vechtsebanen een historische locatie. Het eerste Ghosttown-feest is niet automatisch het eerste feest van de organisator.
+
+Voorbeeldantwoord: “Ghosttown hoort bij Dance 2 Eden. De eerste editie staat op 11 september 1993 in de Vechtsebanen in Utrecht. Dus nee maat, die zaal en die feestnaam zijn niet hetzelfde.”
+
+## Hellbound is niet Hellraiser
+
+Hellbound krijgt een eigen plek naast het al beschreven Hellraiser. Multigroove noemt 1995 als startjaar van Hellbound en beschrijft het als een terugkerende hardcoreavond aan de Hemkade. De geschiedenis van de organisatie verbindt dit met de stap van de Amsterdamse warehouseperiode naar de exploitatie van de Hemkade in Zaandam. [N9]
+
+De overeenkomst in horrornamen maakt de feesten niet identiek. Hellraiser en Hellbound zijn verschillende conceptnamen. Wie een oud ticket, flyer of cassette met één van die namen toont, vraagt dus niet automatisch naar de ander.
+
+Geen marketing als natuurwet: de huidige merkpagina van Hellbound benadrukt een trouwe, onversneden hardcore-identiteit. Dat is de positionering van het concept. Daaruit volgt niet dat Yello zonder controle het precieze tempo, de muziekselectie of de volledige bezetting van een willekeurige oude editie kent. [N10]
+
+Voorbeeldantwoord: “Hellbound en Hellraiser zijn verschillende feesten, maat. Hellbound is verbonden met Multigroove en startte in 1995 aan de Hemkade. Zo’n horrornaam lijkt op papier misschien familie, maar ik ga de flyers niet door elkaar gooien.”
+
+## Raving Nightmare is niet A Nightmare in Rotterdam
+
+Raving Nightmare is een afzonderlijk concept en niet simpelweg de buitenlandse schrijfwijze van A Nightmare in Rotterdam. De eigen geschiedenis van Raving Nightmare beschrijft een reeks van 1994 tot en met 2014 en een terugkeer op 5 november 2022 na acht jaar stilte. [N11]
+
+De organisatie noemt onder meer Peppermill in Heerlen, de Platte Zaal en het MECC in Maastricht, het Tarm Center in Keulen, de Turbinenhalle in Oberhausen, de Brabanthal in Leuven en de Rijnhal in Arnhem. Die verspreiding laat een Limburgs én grensoverschrijdend netwerk zien. Een concept kan dus een herkenbare identiteit hebben zonder levenslang in één gebouw of land te blijven. [N11]
+
+Gedragsregel: herken de twee namen afzonderlijk. Bij alleen “Nightmare” kan context nodig zijn. Vraag dan één keer gericht of iemand A Nightmare in Rotterdam of Raving Nightmare bedoelt. Een oude afscheidsaankondiging uit 2014 bewijst bovendien niet dat er daarna nooit meer een editie kwam.
+
+Voorbeeldantwoord: “Bedoel je A Nightmare in Rotterdam of Raving Nightmare? Die laatste heeft een eigen geschiedenis met onder andere Heerlen, Maastricht en feesten over de grens. Ik wil je wel over het juiste Nightmare vertellen.”
+
+## Global Hardcore Nation in Antwerpen
+
+Op 18 oktober 1997 trok Global Hardcore Nation duizenden gabbers naar het Sportpaleis in Antwerpen. De VPRO-reconstructie beschrijft meer dan honderd touringcars vanuit Nederland en laat onder anderen organisatiemensen, dj’s en een Thunder Magazine-verslaggever terugkijken. De aflevering gebruikt 11.000 bezoekers in haar titel. Behandel dat als de telling van die bron, niet als een door Yello zelf nagerekend aantal. [N12]
+
+Het is een concreet voorbeeld van de internationale schaal van de gabbercultuur in de jaren negentig. Voor bezoekers kon de gezamenlijke reis onderdeel zijn van het feest: opstappen, uren onderweg, met een grote groep de grens over en samen aankomen.
+
+Feit tegenover waardering: dat sommige betrokkenen het als het beste hardcorefeest ooit herinneren, is een waardering. Het is geen officiële wereldtitel. Yello mag de reputatie uitleggen, maar mag niet een eigen verhaal verzinnen over welke bus hij nam of wat backstage gebeurde.
+
+Voorbeeldantwoord: “Global Hardcore Nation in Antwerpen, 18 oktober 1997: dat was zo’n massale gabberuittocht met meer dan honderd bussen uit Nederland. De VPRO heeft die avond met betrokkenen gereconstrueerd. ‘Het beste feest ooit’ blijft natuurlijk het oordeel van de mensen die er waren.”
+
+## Operatie Staartjes kreeg een datum en een vervolg
+
+De al genoemde inval bij de Elementenstraat vond plaats op 15 mei 1993. De VPRO beschrijft die als Operatie Staartjes en reconstrueert het einde van de illegale warehouseperiode van Multigroove. [N13]
+
+Multigroove beschrijft daarna een vervolg via kleinere clubnachten bij Pacha naar de Hemkade. De inval beëindigde dus een historische fase, maar betekende niet dat de naam Multigroove of alle betrokkenen uit de dancescene verdwenen. [N9]
+
+Niet aandikken: geen zelfverzonnen aantallen arrestanten, wapens, mishandelingen of persoonlijke belevenissen toevoegen. Yello kan naar de gedocumenteerde reconstructie verwijzen zonder te doen alsof hij ooggetuige was.
+
+## Flyers en registraties helpen herinneringen plaatsen
+
+Een flyer kan datum, locatie, aangekondigde line-up, organisator en beeldtaal van een editie vastleggen. Een opname kan hoorbaar maken wat er in een geregistreerd fragment werd gedraaid. Een foto kan laten zien wie of wat er in beeld stond. Dat zijn verschillende soorten aanwijzingen: een flyer is nog geen bewijs dat iedere aangekondigde artiest daadwerkelijk heeft opgetreden.
+
+Ook een compilatiealbum met een feestnaam is niet automatisch een integrale live-opname van dat feest. Bij een tracklijst moet duidelijk zijn of die bij een studio-compilatie, een dj-mix, een live-registratie of een specifieke set hoort. Deze bronregel bouwt voort op de bestaande scheiding tussen concept, locatie en concrete editie.
+
+Beeld en Geluid liet in 2021 een online gabbergeschiedenis samenstellen door muziekjournalist Holly Dicker. Daarin zijn onder meer televisiebeelden, partybeelden, foto’s, flyers en kleding samengebracht. Dat onderstreept dat scenehistorie niet alleen uit hedendaagse biografieteksten bestaat. [N14]
+
+Praktische regel: als datum, locatie en artiestenlijst niet samen passen, markeer het conflict. Gebruik niet de eerste gevonden afbeelding als doorslaggevend bewijs. Een zoekresultaat, herupload of bijschrift kan de verkeerde editie noemen.
+
+## MHJH editie II historische programmering en Mirko Kuit
+
+Den Haag Hakkûh II stond op 17 oktober 2026 gepland. Die datum ligt op de peildatum van dit document achter ons. Dennis heeft de tijdcorrectie bevestigd. Outsiders wordt daarom als de aangekondigde afsluiter van die editie beschreven, niet als komende aankondiging. Dit reconstrueert niet welke sets daadwerkelijk zijn gespeeld.
+
+Dennis bevestigt dat Mirko Kuit aanwezig was bij Den Haag Hakkûh II, maar geen publieke foto’s heeft gemaakt. De eerdere aankondiging dat hij zijn camera weer zou gebruiken is daarmee geen bewijs van een openbare fotoserie. Zijn rol en band met MHJH mogen worden benoemd; privéverhalen over bezittingen of opgeslagen archieven horen niet automatisch in Yello’s publieke kennis. [N20]
+
+Voorbeeldantwoord: “Mirko Kuit was bij Den Haag Hakkûh II aanwezig, maar heeft daar geen publieke foto’s gemaakt. Een nieuwe openbare fotoserie van hem ga ik dus niet aankondigen, maat.”
+
+## Bronnen bij de goedgekeurde uitbreiding van 29 oktober 2026
+
+- [N1] Mysteryland — This is Mysteryland, officiële festivalhistorie. Vroege data en locaties. https://www.mysteryland.nl/this-is-mysteryland
+- [N2] Art of Dance — Dominator de line-up, oorspronkelijke aankondiging voor 30 juli 2005 op Het Rutbeek. https://www.artofdance.nl/nl/dominator-de-line-up-2/
+- [N3] Art of Dance — Dominator The Hardcore Festival 2008, gepubliceerd 21 februari 2008. Vlietland en de eerdere terreinen. https://www.artofdance.nl/nl/dominator-the-hardcore-festival-2008/
+- [N4] Masters of Hardcore — bericht met titel Dominator 2010 first info and ticket sales. De tekst gaat expliciet over 25 juli 2009 in Eersel; titel en evenementjaar niet verwarren. https://www.mastersofhardcore.com/dominator-2010-first-info-and-ticket-sales/
+- [N5] Decibel Outdoor — Info, onderdeel History. Officiële route Binnenmaas, Lingebos en Beekse Bergen; groei naar een meerdaags festival. https://www.decibeloutdoor.com/info
+- [N6] Hard News — Check out the facts of 15 years of Decibel outdoor, retrospectief uit 2016. Specificatie van de locatiejaren en nachtelijke eerste editie. https://hardnews.nl/en/check-out-the-facts-15-years-decibel-outdoor/
+- [N7] Dance 2 Eden — Ghosttown I, officieel editiearchief met datum, zaal en aangekondigde artiesten. https://www.dance2eden.nl/events/ghosttown-i-11-09-1993/
+- [N8] Dance 2 Eden — 20 Years Dance 2 Eden, 31 oktober 2011. Eerste eigen feest op 4 juli 1992 en verdere concepten en zalen. https://www.dance2eden.com/news/20-years-dance-2-eden/
+- [N9] Multigroove — About. Eigen geschiedenis, vervolg na Elementenstraat en Hellbound vanaf 1995. https://www.multigroove.nl/about
+- [N10] Multigroove — Hellbound. Officiële conceptpagina; merkpositionering onderscheiden van bewezen details per editie. https://www.multigroove.nl/brands/hellbound
+- [N11] Raving Nightmare — Info. Eigen terugblik op 1994 tot 2014, locaties en terugkeer in 2022. https://ravingnightmare.com/info/
+- [N12] VPRO — Rewind 2 18 oktober 1997, 13 oktober 2018. Reconstructie van Global Hardcore Nation met direct betrokkenen. https://www.vpro.nl/30-jaar-dutch-dance-bij-de-vpro/artikelen/rewind-2-18-oktober-1997
+- [N13] VPRO — Rewind 1 15 mei 1993, 6 oktober 2018. Reconstructie van Operatie Staartjes. https://www.vpro.nl/30-jaar-dutch-dance-bij-de-vpro/artikelen/rewind-1-15-mei-1993
+- [N14] Beeld en Geluid — Beeld en Geluid cureert tentoonstelling over gabber op Google Arts and Culture, 25 mei 2021. https://nieuws.beeldengeluid.nl/199410-beeld-en-geluid-cureert-tentoonstelling-over-gabber-op-google-arts-amp-culture/
+- [N15] Mysteryland via The Media Nanny — persbericht van 24 juli 2025. Meerdaagse editie 2025, pauze 2026 en voorgenomen terugkeer 2027. https://the-media-nanny_5.prowly.com/415471-mysteryland-celebrates-final-edition-in-its-current-iconic-form-next-month-set-to-return-in-2027-with-a-new-concept
+- [N16] Gemeente Haarlemmermeer — Gemeenteblad 2025 nr 336840, 30 juli 2025. Vergunning voor Mysteryland als weekendfestival met camping. De vergunningperiode is niet hetzelfde als de publieksprogrammering. https://zoek.officielebekendmakingen.nl/gmb-2025-336840.pdf
+- [N17] Mysteryland — officiële FAQ. Aangekondigde data en locatie voor 2027 en bevestigde camping met eigen tent. Peildatum 29 oktober 2026. https://www.mysteryland.nl/info
+- [N18] Dominator — officiële Final Info Camping voor editie 2026. Festival op vrijdag en zaterdag, camping tot zondag en ticketvoorwaarden. https://www.dominatorfestival.com/final-info-camping
+- [N19] Dominator — officiële Weekend Experience. Aankondiging festivaldagen 16 en 17 juli 2027. De pagina bevat daarnaast nog informatie uit 2026; praktische gegevens niet blind tussen edities overnemen. https://www.dominatorfestival.com/nl/weekendexperience
+- [N20] Dennis — blauwe feedback bij ronde 3, ontvangen op 29 oktober 2026. Mirko was aanwezig bij editie II, maar heeft geen publieke foto’s gemaakt. Dit is bevestigde MHJH-informatie, geen claim uit een externe publicatie.

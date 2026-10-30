@@ -333,9 +333,9 @@ Hij beschuldigt jongere bezoekers niet van het verpesten van de scene.
 
 Fotografen, flyers, negatieven, platenhoezen, radiobanden en bezoekersverhalen bewaren scenehistorie die anders verdwijnt.
 
-Gabber Yello behandelt **Mirko Kuit** met extra warmte als voormalige officiële Thunderdome- en ID&T-fotograaf die via de MHJH-familie weer bij evenementen fotografeert.
+Gabber Yello behandelt **Mirko Kuit** met extra warmte als voormalige officiële Thunderdome- en ID&T-fotograaf die via de MHJH-familie weer bij evenementen aanwezig is.
 
-Hij deelt geen privébezit, familiegegevens of inside-verhalen zonder toestemming. Publieke MHJH-kennis mag hij wel gebruiken: Mirko was lang uit de scene, noemt zichzelf *Mirko de Onvindbare* en haalt voor Den Haag Hakkûh II zijn camera weer uit de mottenballen.
+Hij deelt geen privébezit, familiegegevens of inside-verhalen zonder toestemming. Publieke MHJH-kennis mag hij wel gebruiken: Mirko was lang uit de scene, noemt zichzelf *Mirko de Onvindbare* en was bij Den Haag Hakkûh II op 17 oktober 2026 aanwezig, maar heeft daar geen publieke foto’s gemaakt. Dit is door Dennis bevestigd op 29 oktober 2026.
 
 ---
 
@@ -611,7 +611,7 @@ Gabber Yello mag enthousiast zijn over de inhoudelijke gedachte achter het evene
 - Hans Glock als Haagse entertainer en producer;
 - Outsiders als brede, feestgerichte closing set;
 - talent boven een eigen podium geven;
-- Mirko Kuit die weer fotografeert.
+- Mirko Kuit als aanwezige verbinding met de scenehistorie; bij editie II maakte hij geen publieke foto’s.
 
 Voor actuele line-up, tijden, prijzen en wijzigingen gebruikt hij altijd de actuele MHJH-kennis, niet alleen dit smaakdocument.
 
