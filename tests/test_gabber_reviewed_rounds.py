@@ -189,6 +189,62 @@ class ReviewedRoundFiveRetrievalTests(unittest.TestCase):
             self.assertIn(expected, text)
 
 
+class ReviewedRoundSixRetrievalTests(unittest.TestCase):
+    def test_reviewed_terms_and_answer_level_are_retrievable(self):
+        checks = (
+            ("Waar komt het woord gabber vandaan?", "West-Jiddische"),
+            ("Gabber Bargoens woord voor kameraad", "1752"),
+            ("Zijn classics hetzelfde als white labels?", "niet automatisch"),
+            ("Wat betekent white label bij vinyl?", "mechanisch"),
+            ("Is een white label altijd een promo of testpersing?", "geen synoniemen"),
+            ("Betekent bootleg overal hetzelfde?", "live- of omroepopnamen"),
+            ("BPM pitch tempo en remixversies", "niet automatisch een nieuwe remix"),
+            ("Waarom meet software 90 in plaats van 180 BPM?", "dubbel of half"),
+            ("Beatmatching en sync tempo beats uitlijnen", "op elkaar"),
+            ("Cue cue point cueing cue sheet", "hoofdtelefoon"),
+            ("Beatgrid en maat bij dj timing", "markeringen"),
+            ("Vinyl control DVS tijdcodevinyl digitale tracks", "tijdcode"),
+            ("Betekent een draaitafel dat de muziek op vinyl staat?", "bewijst niet"),
+            ("Stems muzikale deelgroepen vierdelige formaat", "vier"),
+            ("Vervormde hardcorekick clipping headroom", "signaalpieken"),
+            ("Vaktermen uitleggen in gewone taal", "neem niet aan"),
+            ("Vinylvoorkeur beste track smaak feiten", "geen vastgelegde absolute"),
+            ("Vriendelijk corrigeren zonder automatisch mee te knikken", "concrete persing"),
+            ("Gesprekscontext en onderwerpwissels dubbele betekenissen", "zonder aankondiging"),
+            ("Tracktitel artiest versie productiecredit controleren", "onbevestigde"),
+        )
+        for question, expected in checks:
+            with self.subTest(question=question):
+                excerpts = _hardcore_matches(question)
+                selected = "\n\n".join(excerpts)
+                self.assertIn(expected.casefold(), selected.casefold())
+                self.assertLessEqual(len(excerpts), 3)
+                self.assertLessEqual(len(selected), 7200)
+                self.assertNotIn("hier wel mee uitkijken", selected)
+                self.assertNotIn("op dit moment helemaal niks maat", selected)
+
+    def test_runtime_excludes_review_and_unverified_test_claims(self):
+        from core.mhjh_context import HARDCORE_DIR
+        text = (HARDCORE_DIR / "Gabber_Yello_Hardcorekennis_Ronde_6_Termen_en_Dubbele_Betekenissen.md").read_text(encoding="utf-8")
+        for unwanted in (
+            "Controlelijst voor Dennis", "Controlepunten voor Dennis",
+            "Voorgestelde", "Voorstel:", "aangeleverde testgesprek",
+            "The Ultimate Seduction", "Fers aangekondigde",
+            "Vinyl heeft een unieke warmte", "vinyl blijft koning",
+            "een blanco of eenvoudig wit label",
+            "hier wel mee uitkijken", "YES!!", "hakkenworkshop",
+        ):
+            self.assertNotIn(unwanted, text)
+        for expected in (
+            "goedgekeurd door Dennis", "Gebruik gewone taal",
+            "neem niet aan", "Antwoordniveau:",
+            "zonder aankondiging",
+        ):
+            self.assertIn(expected, text)
+        self.assertNotIn("Voor Dennis was dit de plaat", text)
+        self.assertIn("https://www.etymologiebank.nl/trefwoord/gabber", text)
+
+
 if __name__ == "__main__":
     unittest.main()
 

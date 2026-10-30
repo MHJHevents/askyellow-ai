@@ -69,6 +69,60 @@ def _expand_query(text: str) -> str:
     return f"{text} {' '.join(additions)}".strip()
 
 
+def _has_mhjh_name(text: str) -> bool:
+    q = _normalize(text)
+    return bool(re.search(r"\bkomt?\s*tie\s*dan\s*he\b|\bden haag hakkuh\b|\bde haag hakke\b|\bech heft(?:ig|ag)\b", q))
+
+
+def _mhjh_naming_note() -> str:
+    return (
+        "MHJH-NAMEN — ORGANISATOR, FEEST EN PLATEN UIT ELKAAR HOUDEN:\n"
+        "- MHJH betekent Mijn Huis Jouw Huis. MHJH Events is de organisator. Het door MHJH georganiseerde feest/concept heet "
+        "Komt Tie Dan He – Den Haag Hakkûh; Den Haag Hakkûh II is de tweede editie. "
+        "Komt Tie Dan He is dus een feestnaam van MHJH, niet de naam van de organisatie.\n"
+        "- De afzonderlijke track Kom Tie Dan Hè! uit 2005 is van DJ Norman vs. Darkraver. "
+        "Top 40: hoogste positie 4, acht weken totaal in de lijst. Leid daar geen aantal weken op positie 4 uit af.\n"
+        "- De Haag Hakke!! van Éch Heftag! uit 1993 (DJ Gizmo en Maarten Visser) en "
+        "Den Haag Hakkûh van Hans Glock, The Darkraver en DJ Gizmo uit 2023 zijn afzonderlijke tracks.\n"
+        "Bij een vraag over de MHJH-relatie: leg eerst concreet uit wie het feest organiseert en hoe het heet. "
+        "Bij 'ik dacht Den Haag Hakkûh': bevestig dat die naam inderdaad bij dat MHJH-feest hoort; "
+        "maak van de twee delen van de feesttitel geen twee losse concurrerende evenementen. "
+        "Voeg de verwijzing naar bestaande platen alleen toe wanneer dat de vraag helpt. "
+        "Bij 'ik snap het niet' geef maximaal drie korte zinnen: MHJH Events organiseert het feest, "
+        "dat heet Komt Tie Dan He – Den Haag Hakkûh, en de gelijknamige track is een afzonderlijk muzieknummer. "
+        "Herhaal geen verhaal over vibes en laat een slotzin als Hopelijk is het nu duidelijk achterwege. "
+        "Artiestcredits bewijzen geen eigendom of afwezigheid van rechten: verzin geen MHJH-rechten, licenties, "
+        "toestemming, contracten of labelrol en concludeer ook niet dat MHJH geen rechten heeft. "
+        "Zeg evenmin in het algemeen dat MHJH nooit tracks of anthems uitbrengt."
+    )
+
+
+_NAMING_FOLLOWUP = re.compile(
+    r"(?:(?:die|dat|dit) snap ik niet(?: kun je dat beter uitleggen)?|"
+    r"kun je (?:dat|dit) (?:(?:beter|simpeler|nog eens) )?uitleggen|"
+    r"wat bedoel je(?: daarmee)?|hoe bedoel je(?: dat)?)"
+)
+
+
+def _mhjh_naming_context(message: str, history=None) -> str | None:
+    q = _normalize(message)
+    if _has_mhjh_name(message) or (
+        "mhjh" in q.split() and re.search(r"\b(?:track|nummer|plaat|naam|titel|feest|organisator)\b", q)
+    ):
+        return _mhjh_naming_note()
+    if not _NAMING_FOLLOWUP.fullmatch(q):
+        return None
+    # User turns supply only a bounded topic anchor, never factual claims.
+    for turn in reversed((history or [])[-8:]):
+        if turn.get("role") != "user" or not isinstance(turn.get("content"), str):
+            continue
+        previous = _normalize(turn["content"])
+        if _NAMING_FOLLOWUP.fullmatch(previous):
+            continue
+        return _mhjh_naming_note() if _has_mhjh_name(previous) else None
+    return None
+
+
 def _disambiguation_note(text: str) -> str | None:
     q = _normalize(text)
     if "favoriet" in q and any(term in q for term in ("jouw", "jou", "jij")):
@@ -95,20 +149,8 @@ def _disambiguation_note(text: str) -> str | None:
             "Verheerlijk geheugenverlies of risico niet, geef geen gebruiksinstructie en verzin geen ervaring. Sluit aan bij de "
             "festivalherinnering en muziek. Alleen bij concreet gevaar geef je een korte serieuze veiligheidsreactie."
         )
-    if any(term in q for term in ("den haag hakkuh", "de haag hakke", "ech heftig", "ech heftag")):
-        return (
-            "HARD ANKERFEIT — Haagse titels niet vermengen:\n"
-            "- Éch Heftag! — De Haag Hakke!! is de afzonderlijke hardcore-release uit 1993, "
-            "verbonden met DJ Gizmo en producer Maarten Visser.\n"
-            "- Hans Glock, The Darkraver & DJ Gizmo — Den Haag Hakkûh is de afzonderlijke moderne release uit 2023.\n"
-            "- Zeg daarom niet dat de moderne track simpelweg een origineel van Gizmo & Darkraver of Gizmo & MC Ruffian heeft. "
-            "Leg uit dat de gebruiker waarschijnlijk de oude en moderne Haagse titels aan elkaar koppelt."
-        )
-    if any(term in q for term in ("komt tie dan he", "kom tie dan he", "komtie dan he")):
-        return (
-            "HARD ANKERFEIT — Kom Tie Dan Hè!: de release uit 2005 is van DJ Norman vs. Darkraver. "
-            "Schrijf hem niet toe aan Gizmo en voeg geen andere maker toe. De naam Komt Tie Dan He van MHJH is een culturele verwijzing naar deze plaat."
-        )
+    if _has_mhjh_name(text):
+        return _mhjh_naming_note()
     return None
 
 
@@ -230,7 +272,7 @@ def _hardcore_matches(message: str, limit: int = 3) -> list[str]:
     return excerpts
 
 
-def get_relevant_mhjh_context(message: str):
+def get_relevant_mhjh_context(message: str, history=None):
     q = _normalize(message)
     if not q:
         return None
@@ -253,7 +295,7 @@ def get_relevant_mhjh_context(message: str):
     ]
     hardcore = _hardcore_matches(message)
 
-    anchor = _disambiguation_note(message)
+    anchor = _disambiguation_note(message) or _mhjh_naming_context(message, history)
     selected = operational + hardcore
     unknown_name = _unknown_name_note(message, "\n\n".join(selected))
     combined = ([unknown_name] if unknown_name else []) + ([anchor] if anchor else []) + selected

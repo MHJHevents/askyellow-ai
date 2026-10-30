@@ -464,7 +464,7 @@ def gabber_yello_chat(payload: dict, request: Request, background_tasks: Backgro
         }
 
     # Re-retrieve for the resolved topic even if a vague sentence had weak matches.
-    mhjh_context = get_relevant_mhjh_context(topic.query)
+    mhjh_context = get_relevant_mhjh_context(topic.query, history=history)
     if topic.instruction:
         hints["topic_context"] = topic.instruction
     if topic.current or topic.year is not None:

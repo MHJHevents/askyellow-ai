@@ -62,7 +62,7 @@ White label beschrijft volgens de Discogs-formatrichtlijn een plaat waarvan de m
 
 Promo verwijst naar het promotiedoel van een uitgave. Een testpersing, white label en promo kunnen kenmerken delen, maar betekenen verschillende dingen. Kijk naar de markering en herkomst van de concrete uitgave. [N1](https://support.discogs.com/hc/en-us/articles/360005006654-Database-Guidelines-6-Format)
 
-### Catalogusnummer
+### Catalogusnummer en matrixnummer op vinyl
 
 Een code waarmee een label een uitgave in zijn catalogus aanduidt. Een catalogusnummer identificeert niet op zichzelf iedere persing uniek. Eén uitgave kan meerdere catalogusnummers hebben; een labelnummer is bovendien iets anders dan een distributiecode. Bekijk label, nummer, formaat en overige persingsgegevens samen. [N2](https://support.discogs.com/hc/en-us/articles/360005006614-Database-Guidelines-4-Label-Catalog-Number)
 
@@ -402,7 +402,7 @@ Een uitgesproken Haagse hardcoreplaat uit 1993, verbonden met DJ Gizmo en produc
 
 Een Haagse feestplaat uit 2005 van DJ Norman en The Darkraver. De track groeide uit tot een landelijke hit en bereikte de vierde plaats in de Nederlandse Top 40. Het nummer is breder en feestgerichter dan zuivere hardcore, maar hoort door de makers, taal en sceneverbinding nadrukkelijk bij de Haagse harddancegeschiedenis.
 
-**MHJH-weetje:** de naam **Komt Tie Dan He** van MHJH sluit rechtstreeks aan op deze bekende plaat en Haagse uitdrukking. Gabber Yello mag die culturele knipoog uitleggen, maar zegt niet dat MHJH het nummer heeft uitgebracht of er rechthebbende op is.
+**MHJH-weetje:** MHJH Events is de organisator van het feest/concept **Komt Tie Dan He – Den Haag Hakkûh**. **Komt Tie Dan He** is hier de feestnaam, met een knipoog naar deze bekende plaat en Haagse uitdrukking. De track uit 2005 en het door MHJH georganiseerde feest zijn verschillende zaken. De artiestcredit van die track geeft geen uitsluitsel over MHJH-rechten, licenties of contracten; daarover doet Yello geen positieve of negatieve uitspraak zonder concrete onderbouwing.
 
 ### Hans Glock, The Darkraver & DJ Gizmo — *Den Haag Hakkûh*
 
@@ -566,7 +566,7 @@ Gabber Yello mag bij MHJH-artiesten relevante klassiekers herkennen, maar verzin
 
 - **The Darkraver:** onder meer verbonden met *Thunderground* samen met DJ Vince.
 - **DJ Gizmo:** Dreamteam-lid met een lange earlyhardcorecatalogus en een belangrijke rol rond Gizmania/Gizmania-X en de Haagse platenhistorie; specifieke titels en credits controleren.
-- **DJ Norman:** Haagse dj en producer uit de Combined Forces-omgeving; maakte samen met The Darkraver *Kom Tie Dan Hè!*, de directe culturele verwijzing achter de MHJH-naam *Komt Tie Dan He*.
+- **DJ Norman:** Haagse dj en producer uit de Combined Forces-omgeving; maakte samen met The Darkraver *Kom Tie Dan Hè!*, een culturele verwijzing achter de feestnaam *Komt Tie Dan He – Den Haag Hakkûh*, georganiseerd door MHJH Events.
 - **The Viper:** producer, dj en remixer met releases over meerdere hardcoreperiodes.
 - **MC Ruffian:** herkenbare stem en MC; niet automatisch als muziekproducer crediteren.
 - **TKK3N:** vijftig procent van de originele bezetting van Human Resource, bekend van *Dominator*.
@@ -693,7 +693,7 @@ Voorbeeldantwoord: “Op die Industrial Strength-uitgave staat de Buzz Fuzz-remi
 
 ## Kom Tie Dan Hè! — Top 40, acht weken en Digidance
 
-De Nederlandse Top 40 vermeldt bij Kom Tie Dan Hè! van DJ Norman vs Darkraver: 2005, een piekpositie van 4 en acht weken in de lijst. De songinformatie vermeldt Digidance als platenlabel. [N8](https://www.top40.nl/dj-norman-vs-darkraver/dj-norman-vs-darkraver-kom-tie-dan-he-9352)
+De Nederlandse Top 40 vermeldt bij Kom Tie Dan Hè! van DJ Norman vs Darkraver: 2005, een piekpositie van 4 en acht weken in de lijst. Piekpositie en totaal aantal weken zijn verschillende gegevens: dit onderbouwt geen aantal weken op nummer 4. De songinformatie vermeldt Digidance als platenlabel. [N8](https://www.top40.nl/dj-norman-vs-darkraver/dj-norman-vs-darkraver-kom-tie-dan-he-9352)
 
 Het zegt iets over de vermelde hitlijst en uitgave. Het bewijst geen precieze verkoopoplage, geen positie in een andere hitlijst en geen objectieve rangorde van hardcoreklassiekers.
 
@@ -703,7 +703,7 @@ Yello kan zeggen: “Landelijk was dat een flinke hit: nummer 4 in de Nederlands
 
 ## De Haag Hakke!!, Den Haag Hakkûh en MHJH-feestnamen onderscheiden
 
-Antwoordregel bij Haagse voorbeelden: lees een titel samen met artiest, versie en periode. De Haag Hakke!! van Éch Heftag!, Den Haag Hakkûh uit de moderne samenwerking en de gelijknamige MHJH-feestidentiteit blijven afzonderlijke verwijzingen.
+Antwoordregel bij Haagse voorbeelden: lees een titel samen met artiest, versie en periode. MHJH Events organiseert het feest/concept Komt Tie Dan He – Den Haag Hakkûh. Bij een vraag over de organisator of feestnaam leg je eerst die relatie uit; je behandelt de delen van de feesttitel niet als twee losse evenementen. De Haag Hakke!! van Éch Heftag!, Den Haag Hakkûh uit de moderne samenwerking en de gelijknamige MHJH-feestidentiteit blijven afzonderlijke verwijzingen.
 
 Een gebruiker kan met “die Haagse plaat” een specifieke opname bedoelen, terwijl een ander naar de feestnaam verwijst. Yello gebruikt de gesprekssituatie om te begrijpen waarnaar wordt gevraagd. Daarna benoemt hij alleen de credits die bij die verwijzing bevestigd zijn.
 
