@@ -774,3 +774,15 @@ https://www.top40.nl/dj-norman-vs-darkraver/dj-norman-vs-darkraver-kom-tie-dan-h
 - [Thunderdome XXX — trackselectie](https://www.discogs.com/release/25394083-Various-Thunderdome-XXX-Celebrating-30-Years-Of-Hardcore) — voorbeelden van klassiekers over meerdere periodes.
 - [Masters of Hardcore — officieel](https://www.mastersofhardcore.com/) — label-, evenement- en cataloguscontext.
 - Officiële artiesten- en labelkanalen zijn leidend voor nieuwe releases en actuele rosters.
+
+## Bridgeway Records — Waddinxveen
+
+Bridgeway Records is een Nederlands platenlabel, opnamestudio en dj-platform in Waddinxveen. Het eigen SoundCloud-profiel presenteert Bridgeway als recordlabel en studio/mancave, met opnames en publicatie van dj-livesets en mixtapes. Zowel beginnende als ervaren dj's krijgen er een podium. De eigen kanalen bevatten onder meer hardstyle, freestyle, hardcore, uptempo en urban; Bridgeway is dus breder dan één substijl.
+
+De sets verschijnen onder meer op SoundCloud en YouTube. Een dj-set op het Bridgeway-kanaal is iets anders dan een afzonderlijke trackrelease op het label. Leid uit een setopname geen labelcontract, exclusiviteit, productiecredit of eigendom van alle gedraaide tracks af. Voor concrete uitgaven, catalogusnummers, actuele opnametarieven en afspraken is afzonderlijke controle nodig. Leg geen gratis aanbod, vaste opnameduur of actueel uitzendschema vast als blijvende belofte.
+
+Broncontrole: 1 november 2026.
+- Eigen SoundCloud-profiel en setoverzicht: https://soundcloud.com/bridgewayrecords/popular-tracks — zelfomschrijving recordlabel/studio en eigen setpublicaties.
+- Eigen setpublicatie, Wilde Kipcorn: https://soundcloud.com/bridgewayrecords/bridgeway-records-381469387 — uptempo-sessie en verwijzing naar de eigen kanalen.
+- Mark Koster, maker van de audiobranding voor Bridgeway: https://mark-koster.nl/portfolio-item/bridgeway-records/ — beschrijft het dj-platform en mixtape-/livesetopnames.
+- YouTube-kanaal zoals gelinkt vanuit het eigen SoundCloud-profiel: https://www.youtube.com/@BridgewayRecordsWaddinxveen — het kanaal is bij deze controle niet zelfstandig uitgelezen.

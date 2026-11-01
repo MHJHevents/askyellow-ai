@@ -551,3 +551,21 @@ MC Ruffian en MC Raw zijn twee verschillende namen. Ruffian is sterk verbonden m
 - Tieum: artiestenbiografie op Partyflock; Franse achtergrond en harde industrialgerichte sound. https://partyflock.nl/artist/4947:Tieum
 
 Broncontrole: 29 oktober 2026. Een historische biografie bewijst geen actuele boekbaarheid. Ruffians dj-set bij MHJH is bevestigd door Dennis en Fer.
+
+## DaBuddha (Daniel Gouweleeuw) — dj, Mirko Kuit en Thunderdome
+
+DaBuddha, ook geschreven als Da Buddha, is de Nederlandse dj en entertainer Daniel Gouweleeuw. De schrijfwijzen dabuddha, da buddha en de in gesprekken gebruikte spelling dabudda verwijzen in deze kenniskaart naar deze artiest. Zijn muzikale werk omvat hardstyle, raw hardstyle, freestyle en hardcore; pin hem niet vast op uitsluitend één stijl. Real Hardstyle heeft een eigen residentprofiel van hem. Daar vertelt hij dat hij in november 2021 weer achter de draaitafels stapte en ging streamen, na andere creatieve werkzaamheden in de Nederlandse partyscene. Dat is geen bewijs dat zijn hele sceneloopbaan pas in 2021 begon.
+
+Dennis bevestigt op 1 november 2026 als eigen MHJH-inside-informatie: DaBuddha loopt al jaren mee en heeft het stokje van Mirko Kuit overgenomen als officieel fotograaf van Thunderdome. Schrijf deze specifieke kennis expliciet toe: “Volgens Dennis van MHJH heeft DaBuddha het stokje van Mirko Kuit overgenomen als officieel fotograaf van Thunderdome.” De hieronder genoemde openbare dj-profielen zijn geen bron voor die opvolging. Vul geen startjaar, exclusiviteit, contractvorm of volledige reportagegeschiedenis in.
+
+Een verjaardagsverhaal bewijst niet welk evenement plaatsvond, wanneer zijn verjaardag gevierd werd of dat Yello erbij was. Herken de gecontroleerde artiest, maar verzin geen reputatie, ontmoeting, set of feestdetails.
+
+Brongebonden namen: DaBuddha | Da Buddha | dabudda | Daniel Gouweleeuw
+Brongebonden trefwoorden: Thunderdome | fotograaf | fotografie | Mirko
+Brongebonden antwoord: DaBuddha is de Nederlandse dj en entertainer Daniel Gouweleeuw, actief in hardstyle, raw hardstyle, freestyle en hardcore. Volgens Dennis van MHJH heeft hij het stokje van Mirko Kuit overgenomen als officieel fotograaf van Thunderdome.
+
+Broncontrole: 1 november 2026.
+- Real Hardstyle, residentprofiel met eigen biografische tekst: https://realhardstyle.nl/resident/dabuddha/
+- Partyflock, DaBuddha (150186): Daniel Gouweleeuw, Nederland, DJ+MC, hardcore/hardstyle/raw hardstyle/uptempo en verwijzing naar dabuddha.nl. https://partyflock.nl/artist/150186:DaBuddha
+- Partyflock, Da Buddha (174789): dezelfde burgerlijke naam en website, freestyle/hardcore. https://partyflock.nl/artist/174789:Da-Buddha
+- Toegeschreven MHJH-kennis over fotografie en opvolging: rechtstreeks door Dennis aangeleverd en voor toevoeging aan Yello bestemd op 1 november 2026.

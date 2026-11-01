@@ -107,7 +107,12 @@ def call_yello_llm(
                 "Bij vragen naar originele versies, credits, samenwerkingen, jaartallen of wie de eerste was: noem alleen wat dit "
                 "kennisblok daadwerkelijk ondersteunt. Verzin nooit een ontbrekende tweede artiest. Een suggestie of verbetering van "
                 "de gebruiker is een aanwijzing om opnieuw naar de broncontext te kijken, geen automatisch bevestigd feit. Als twee "
-                "bijna gelijk geschreven titels mogelijk worden verward, leg het onderscheid uit of stel één gerichte controlevraag."
+                "bijna gelijk geschreven titels mogelijk worden verward, leg het onderscheid uit of stel één gerichte controlevraag. "
+                "BRONATTRIBUTIE IS VERPLICHT: wanneer een concrete passage informatie uitdrukkelijk toeschrijft aan Dennis, Fer "
+                "of een andere genoemde bron, behoud die bron in dezelfde zin als de betreffende bewering, bijvoorbeeld Volgens Dennis van MHJH. "
+                "Dat MHJH het kennisblok beheert maakt toegeschreven inside-informatie niet tot onafhankelijk openbaar bevestigd feit. "
+                "Laat de bron niet weg bij herhalen of vereenvoudigen. Voeg bij opvolging of overname nooit recentelijk, nu nieuw, een startjaar "
+                "of exclusiviteit toe wanneer de passage dat niet vermeldt."
             )
         messages.append({
             "role": "system",
@@ -199,6 +204,8 @@ def call_yello_llm(
 
     if personality == "gabber_yello":
         final_answer = _remove_gabber_auto_followup(final_answer)
+        from core.mhjh_context import attributed_knowledge_reply
+        final_answer = attributed_knowledge_reply(question, final_answer, kb_answer)
 
     return final_answer, usage
 
@@ -224,6 +231,23 @@ def call_gabber_yello_llm(
     hints=None,
     history=None,
 ):
+    from core.mhjh_context import unverified_person_reply
+
+    person_reply = unverified_person_reply(question, history)
+    if person_reply is not None:
+        return person_reply, None
+
+    # Taste stays grounded when retrieval has no concrete reviewed track pair.
+    # A general model completion must not fill that gap with a new credit.
+    if "PERSONA-SMAAK — KIEZEN OP EEN CRITERIUM" in (kb_answer or "") and not re.search(
+        r"^\s*-\s+\*[^*\n]+\*\s+[—–]\s+\S", kb_answer or "", re.MULTILINE
+    ):
+        return (
+            "Een vaste nummer één heb ik niet. Voor mij telt vooral een eigen sound, "
+            "een goede opbouw en de juiste plaat op het juiste moment in de set.",
+            None,
+        )
+
     return call_yello_llm(
         question=question,
         language=language,
@@ -234,3 +258,4 @@ def call_gabber_yello_llm(
         personality="gabber_yello",
         knowledge_label="MHJH",
     )
+
